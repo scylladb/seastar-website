@@ -9,7 +9,7 @@ Seastar is an advanced, open-source C++ framework for high-performance server ap
 
 # Performance
 ![httpd-throughput](/seastar/seastar-httpd-throughput.png)
-![memcache](/seastar/seastar-memcache.png)
+![memcache](/seastar-memcache.png)
 
 In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 
