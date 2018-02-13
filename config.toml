@@ -1,8 +1,8 @@
 languageCode = "en-us"
 title = "Seastar"
 theme = "crab"
-baseurl = "https://rusher81572.github.io/seastar/"
-#baseurl = "/"
+#baseurl = "https://rusher81572.github.io/seastar/"
+baseurl = "/"
 publishDir = "docs"
 
 [params]
