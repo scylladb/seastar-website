@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/blog/2018/02/my-second-blog/</loc>
+    <loc>/seastar/blog/2018/02/first-blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/blog/2018/02/test/</loc>
+    <loc>/seastar/blog/2018/02/my-second-blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/home/</loc>
+    <loc>/seastar/home/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/networking/</loc>
+    <loc>/seastar/networking/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/shared-nothing/</loc>
+    <loc>/seastar/shared-nothing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/blog/</loc>
+    <loc>/seastar/blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/</loc>
+    <loc>/seastar/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://rusher81572.github.io/seastar/tags/</loc>
+    <loc>/seastar/tags/</loc>
     <priority>0</priority>
   </url>
   
