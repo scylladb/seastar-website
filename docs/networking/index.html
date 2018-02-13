@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Networking - Seastar</title>
+    <link rel="stylesheet" href="https://rusher81572.github.io/seastar/css/crab.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <meta name="generator" content="Hugo 0.36" />
+
+
+
+    
+
+  </head>
+  <body>
+
+    <div id="container">
+
+      <div id="header">
+
+        <div id="site-logo">
+          
+            <img src="https://rusher81572.github.io/seastar/img/crab-logo.png">
+          
+        </div>
+
+	<div id="site-title"><a href="https://rusher81572.github.io/seastar/">Seastar</a></div>
+	<div id="site-slogan">The Official Website for the Seastar Project</div>
+
+      </div>
+
+            <nav>
+	<ul class="first">
+          
+            <li><a href="/seastar/">Home</a>
+	    
+	    </li>
+	  
+            <li><a href="/seastar/blog/">Blog</a>
+	    
+	    </li>
+	  
+            <li><a href="/seastar/documentation/">Documentation</a>
+	    
+	    </li>
+	  
+            <li><a href="/seastar/faq/">Frequently Asked Questions</a>
+	    
+	    </li>
+	  
+            <li><a href="/seastar/contact/">ScyllaDB</a>
+	    
+	    </li>
+	  
+	</ul>
+      </nav>
+
+
+      <div id="content">
+
+        <div id="article">
+	  <h1>Networking</h1>
+
+
+
+
+<p>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.</p>
+
+<ul>
+<li><strong>DPDK networking on Linux:</strong> A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking. No system calls are required for communicating, and no data copying ever occurs. This is the preferred choice for best performance.</li>
+<li><strong>Linux standard socket APIs:</strong> Seastar applications can be built to use ordinary Linux networking, for ease of application development.</li>
+<li><strong>Seastar native stack vhost on Linux:</strong> Dedicate a Linux <code>virtio-net</code> device to the Seastar application, and bypass the Linux network stack. This is mostly used for developing the Seastar TCP/IP stack itself.</li>
+<li><strong>Virtio device on OSv:</strong> Native stack networking running on the OSv platform instead of Linux: OSv assigns the virtual device to the Seastar application.</li>
+</ul>
+
+<h2 id="why-networking-alternatives">Why networking alternatives?</h2>
+
+<p>Conventional networking functionality available in Linux is remarkably full-featured, mature, and performant. However, for truly networking-intensive applications, the Linux stack is constrained:</p>
+
+<ul>
+<li><strong>Kernel space implementation</strong> separation of the network stack into kernel space means that costly context switches are needed to perform network operations, and that data copies must be performed to transfer data from kernel buffers to user buffers and vice-versa.</li>
+<li><strong>Time sharing</strong> Linux is a time-sharing system, and so must rely on slow, expensive interrupt to notify the kernel that there are new packets to be processed.</li>
+<li><strong>Threaded model</strong> the Linux kernel is heavily threaded, so all data structures are protected with locks. While a huge effort has made Linux very scalable, this is not without limitations and contention occurs at large core counts. Even without contention, the locking primitives themselves are relatively slow and impact networking performance.</li>
+</ul>
+
+<p>By using a user-space TCP/IP stack that is implemented using Seastar basic primitives, these constraints are avoided. Seastar native networking enjoys zero-copy, zero-lock, and zero-context-switch performance.</p>
+
+<p>An alternative user-space network toolkit, <a href="http://dpdk.org/">DPDK</a>, is designed specifically for fast packet processing, usually in less than 80 CPU cycles per packet. It integrates seamlessly with Linux in order to take advantage of high-performance hardware.</p>
+
+<p>Seastar is designed for future-proof development: you can build and run the same applications to run with the networking mode that works best at deployment time, instead of having to commit to economically unpredictable technology choices in advance.</p>
+
+<p><strong>Next:</strong> <a href="/seastar/futures-promises">Futures and Promises</a></p>
+
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        Copyright 2018 ScyllaDB
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
