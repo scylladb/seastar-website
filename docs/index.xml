@@ -2,93 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seastar</title>
-    <link>/</link>
+    <link>/seastar/</link>
     <description>Recent content on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Feb 2018 08:02:27 -0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/seastar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Futures and Promises</title>
-      <link>/futures-promises/</link>
+      <link>/seastar/futures-promises/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/futures-promises/</guid>
+      <guid>/seastar/futures-promises/</guid>
       <description>Paradigms for parallellization Solutions for coordinating work across multiple cores are many. Some are highly programmer-friendly and enable development of software that works exactly if it were running on a single core. For example the classic Unix process model is designed to keep each process in total isolation and relies on kernel code to maintain a separate virtual memory space per process. Unfortunately this increases the overhead at the OS level.</description>
     </item>
     
     <item>
       <title>HTTP performance</title>
-      <link>/http-performance/</link>
+      <link>/seastar/http-performance/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/http-performance/</guid>
+      <guid>/seastar/http-performance/</guid>
       <description>Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.
 This benchmark uses two identical Intel® Server System R2000WT servers.
  2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core (28 cores per host, with hyperthreading to 56 cores per host)
@@ -98,10 +98,10 @@ This benchmark uses two identical Intel® Server System R2000WT servers.
     
     <item>
       <title>Home</title>
-      <link>/home/</link>
+      <link>/seastar/home/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/home/</guid>
+      <guid>/seastar/home/</guid>
       <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
 Performance In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 Details on HTTP performance data are also available.
@@ -110,10 +110,10 @@ About Seastar is the first framework to bring together a set of extreme architec
     
     <item>
       <title>Message Passing</title>
-      <link>/message-passing/</link>
+      <link>/seastar/message-passing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/message-passing/</guid>
+      <guid>/seastar/message-passing/</guid>
       <description>Threaded applications require inherently expensive locking operations, while the Seastar model can completely avoid locks for cross-CPU communications.
 From the programmer’s point of view, Seastar uses futures, promises, and continuations (f/p/c). Where conventional event-driven programming using epoll and userspace libraries such as libevent has made it very difficult to write complex applications, f/p/c makes it easier to write complex asynchronous code.
 For example, the following interaction between a sender core, C0, and a receiver core, C1, can take place with no locking required.</description>
@@ -121,20 +121,20 @@ For example, the following interaction between a sender core, C0, and a receiver
     
     <item>
       <title>Networking</title>
-      <link>/networking/</link>
+      <link>/seastar/networking/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/networking/</guid>
+      <guid>/seastar/networking/</guid>
       <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
  DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
     </item>
     
     <item>
       <title>Shared-nothing Design</title>
-      <link>/shared-nothing/</link>
+      <link>/seastar/shared-nothing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/shared-nothing/</guid>
+      <guid>/seastar/shared-nothing/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
 Core Counts Grow, Clock Speeds Stay Constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>
