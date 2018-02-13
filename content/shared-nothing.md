@@ -18,9 +18,9 @@ On new hardware, the performance of standard workloads depends more on locking a
 The networking and storage devices available on a modern system have also continued to grow in speed. However, CPU cores the ability to process packets on any one core has not.
 
 A 2GHz processor handling 1024-byte packets at wire speed on a 10GBps network has only 1670 clock cycles per packet. (source: [Intel DPDK Overview](http://www.intel.com/content/dam/www/public/us/en/documents/presentation/dpdk-packet-processing-ia-overview-presentation.pdf))
-
+<br>
 ![memcache](/seastar/shared-nothing-design.png)
-
+<br>
 ## The Seastar model: shared-nothing
 
 Because sharing of information across cores requires costly locking, Seastar uses a shared-nothing model that shards all requests onto individual cores.
