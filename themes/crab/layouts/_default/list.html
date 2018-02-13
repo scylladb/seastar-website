@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 
-{{ if hasPrefix .URL "/blog/" }}
+{{ if hasPrefix .URL "/seastar/blog/" }}
 
   {{ range sort .Paginator.Pages }}
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
