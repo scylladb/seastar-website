@@ -42,6 +42,16 @@ About Seastar is the first framework to bring together a set of extreme architec
     </item>
     
     <item>
+      <title>Networking</title>
+      <link>https://rusher81572.github.io/seastar/networking/</link>
+      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
+      
+      <guid>https://rusher81572.github.io/seastar/networking/</guid>
+      <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
+ DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
+    </item>
+    
+    <item>
       <title>Shared-nothing Design</title>
       <link>https://rusher81572.github.io/seastar/shared-nothing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
