@@ -20,7 +20,7 @@ In the above examples, all servers are running on Linux. The stock Memcached is 
 Seastar is the first framework to bring together a set of extreme architectural innovations, including:
 
 * [Shared-nothing design](/seastar/shared-nothing): Seastar uses a shared-nothing model that shards all requests onto individual cores.
-* [High-performance networking](/seastar/networking): Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.
+* [High-performance networking](/seastar/networking width="48"): Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.
 * Futures and promises: an advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.
 * Message passing: a design for sharing information between CPU cores without time-consuming locking
 
