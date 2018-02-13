@@ -16,7 +16,7 @@ Each actual queue, one for requests and a return queue for fulfilled requests, i
 
 There is one request queue and one return queue per pair of CPU cores on the system. Because a core does not pair with itself, a 16-core system will have 240 request queues and 240 return queues.
 
-# From the programmer’s point of view
+# From the Programmer’s Point of View
 
 Seastar provides a versatile set of programming constructs to manage communication between cores. For example:
 ```

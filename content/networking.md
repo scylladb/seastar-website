@@ -11,7 +11,7 @@ Seastar supports four different networking modes on two platforms, all without a
 * **Seastar native stack vhost on Linux:** Dedicate a Linux ```virtio-net``` device to the Seastar application, and bypass the Linux network stack. This is mostly used for developing the Seastar TCP/IP stack itself.
 * **Virtio device on OSv:** Native stack networking running on the OSv platform instead of Linux: OSv assigns the virtual device to the Seastar application.
 
-## Why networking alternatives?
+## Why Networking Alternatives?
 Conventional networking functionality available in Linux is remarkably full-featured, mature, and performant. However, for truly networking-intensive applications, the Linux stack is constrained:
 
 * **Kernel space implementation** separation of the network stack into kernel space means that costly context switches are needed to perform network operations, and that data copies must be performed to transfer data from kernel buffers to user buffers and vice-versa.

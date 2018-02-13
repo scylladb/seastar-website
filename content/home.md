@@ -24,7 +24,7 @@ Seastar is the first framework to bring together a set of extreme architectural 
 * [Futures and promises](/seastar/futures-promises): an advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.
 * [Message passing](/seastar/message-passing): a design for sharing information between CPU cores without time-consuming locking
 
-# Seastar applications
+# Seastar Applications
 While many applications can benefit from high performance, Seastar is currently focused on high-throughput, low-latency I/O intensive applications.
 
 * [Pedis](https://github.com/fastio/pedis): Redis-compatible data structure store
@@ -32,7 +32,7 @@ While many applications can benefit from high performance, Seastar is currently 
 * Seastar HTTPD: web server
 * [Seastar Memcached](http://www.seastar-project.org/memcached/): a fast server for the Memcache key-value store
 
-# Getting started with Seastar
+# Getting Started with Seastar
 
 Source code is available from the [Seastar repository on GitHub](https://github.com/scylladb/seastar).
 
