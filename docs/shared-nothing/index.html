@@ -65,13 +65,13 @@
 
 <p>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.</p>
 
-<h2 id="core-counts-grow-clock-speeds-stay-constant">Core counts grow, clock speeds stay constant</h2>
+<h2 id="core-counts-grow-clock-speeds-stay-constant">Core Counts Grow, Clock Speeds Stay Constant</h2>
 
 <p>Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.</p>
 
 <p>On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core. Software architects face two unattractive alternatives: coarse-grained locking, which will see application threads contend for control of the data and wait instead of producing useful work, and fine-grained locking, which, in addition to being hard to program and debug, sees significant overhead even when no contention occurs, due to the locking primitives themselves.</p>
 
-<h2 id="meanwhile-i-o-continues-to-increase-in-speed">Meanwhile, I/O continues to increase in speed</h2>
+<h2 id="meanwhile-i-o-continues-to-increase-in-speed">Meanwhile, I/O Continues to Increase in Speed</h2>
 
 <p>The networking and storage devices available on a modern system have also continued to grow in speed. However, CPU cores the ability to process packets on any one core has not.</p>
 
@@ -80,7 +80,7 @@
 <img src="/seastar/shared-nothing-design.png" alt="memcache" />
 <br></p>
 
-<h2 id="the-seastar-model-shared-nothing">The Seastar model: shared-nothing</h2>
+<h2 id="the-seastar-model-shared-nothing">The Seastar Model: Shared-nothing</h2>
 
 <p>Because sharing of information across cores requires costly locking, Seastar uses a shared-nothing model that shards all requests onto individual cores.</p>
 
@@ -88,7 +88,7 @@
 
 <p>Any sharing of resources across cores must be handled explicitly. For example, when two requests are part of the same session, and two CPUs each get a request that depends on the same session state, one CPU must explicitly forward the request to the other. Either CPU may handle either response. Seastar provides facilities that limit the need for cross-core communication, but when communication is inevitable, it provides high performance non-blocking communication primitives to ensure performance is not degraded.</p>
 
-<h2 id="explicit-communication-between-cores">Explicit communication between cores</h2>
+<h2 id="explicit-communication-between-cores">Explicit Communication Between Cores</h2>
 
 <p>Seastar provides several related functions for communicating between cores. The simplest is:</p>
 

@@ -123,7 +123,7 @@ For example, the following interaction between a sender core, C0, and a receiver
       
       <guid>/seastar/shared-nothing/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
-Core counts grow, clock speeds stay constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
+Core Counts Grow, Clock Speeds Stay Constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>
     </item>
     
