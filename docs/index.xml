@@ -85,10 +85,10 @@
     
     <item>
       <title>HTTP performance</title>
-      <link>/seastar/httpd-performance/</link>
+      <link>/seastar/http-performance/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/httpd-performance/</guid>
+      <guid>/seastar/http-performance/</guid>
       <description>Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.
 This benchmark uses two identical Intel® Server System R2000WT servers.
  2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core (28 cores per host, with hyperthreading to 56 cores per host)
