@@ -1,7 +1,8 @@
 languageCode = "en-us"
 title = "Seastar"
 theme = "crab"
-baseurl = "https://example.com"
+baseurl = "/"
+publishDir = "docs"
 
 [params]
 description = "The Official Website for the Seastar Project"
