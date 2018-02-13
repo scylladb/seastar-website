@@ -1,0 +1,50 @@
+languageCode = "en-us"
+title = "Seastar"
+theme = "crab"
+baseurl = "https://example.com"
+
+[params]
+description = "The Official Website for the Seastar Project"
+# logoimage = "images/logo.jpg"
+copyright = "ScyllaDB"
+
+
+
+[permalinks]
+blog  = "/blog/:year/:month/:title/"
+
+[taxonomies]
+tags = "tags"
+
+[[menu.main]]
+weight = 1
+name = "Home"
+url = "/"
+
+[[menu.main]]
+weight = 2
+name = "Shared-nothing Design"
+url = "/design/"
+
+[[menu.main]]
+weight = 2
+name = "Blog"
+url = "/blog/"
+
+
+[[menu.main]]
+weight = 3
+name = "Documentation"
+url = "/documentation/"
+identifier = "documentation"
+
+[[menu.main]]
+weight = 4
+name = "Frequently Asked Questions"
+url = "/faq/"
+
+
+[[menu.main]]
+weight = 5
+name = "ScyllaDB"
+url = "/contact/"
