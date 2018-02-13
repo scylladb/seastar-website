@@ -39,10 +39,6 @@
 	    
 	    </li>
 	  
-            <li><a href="/seastar/design/">Shared-nothing Design</a>
-	    
-	    </li>
-	  
             <li><a href="/seastar/documentation/">Documentation</a>
 	    
 	    </li>
@@ -83,10 +79,21 @@
 <p>Seastar is the first framework to bring together a set of extreme architectural innovations, including:</p>
 
 <ul>
-<li>Shared-nothing design: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
+<li><a href="/seastar/shared-nothing.md">Shared-nothing design</a>: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
 <li>High-performance networking: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</li>
 <li>Futures and promises: an advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.</li>
 <li>Message passing: a design for sharing information between CPU cores without time-consuming locking</li>
+</ul>
+
+<h1 id="seastar-applications">Seastar applications</h1>
+
+<p>While many applications can benefit from high performance, Seastar is currently focused on high-throughput, low-latency I/O intensive applications.</p>
+
+<ul>
+<li><a href="https://github.com/fastio/pedis">Pedis</a>: Redis-compatible data structure store</li>
+<li><a href="http://www.scylladb.com/">Scylla</a>: NoSQL column-store database, compatible with Apache Cassandra at 10x the throughput</li>
+<li>Seastar HTTPD: web server</li>
+<li><a href="http://www.seastar-project.org/memcached/">Seastar Memcached</a>: a fast server for the Memcache key-value store</li>
 </ul>
 
 <h1 id="getting-started-with-seastar">Getting started with Seastar</h1>
@@ -97,9 +104,11 @@
 
 <p><a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev</a> is the project mailing list.</p>
 
-<p><strong>Next</strong>: <a href="/seastar/design">shared-nothing design</a></p>
-
 <p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
+
+<p><br><br>
+<strong>Next</strong>: <a href="/seastar/shared-nothing">shared-nothing design</a>
+<br><br></p>
 
 
         </div>

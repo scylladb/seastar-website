@@ -43,10 +43,10 @@ About Seastar is the first framework to bring together a set of extreme architec
     
     <item>
       <title>Shared-nothing Design</title>
-      <link>https://rusher81572.github.io/seastar/design/</link>
+      <link>https://rusher81572.github.io/seastar/shared-nothing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/design/</guid>
+      <guid>https://rusher81572.github.io/seastar/shared-nothing/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
 Core counts grow, clock speeds stay constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>

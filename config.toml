@@ -24,11 +24,6 @@ url = "/"
 
 [[menu.main]]
 weight = 2
-name = "Shared-nothing Design"
-url = "/design/"
-
-[[menu.main]]
-weight = 2
 name = "Blog"
 url = "/blog/"
 
