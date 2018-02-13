@@ -22,9 +22,9 @@
 
         <div id="site-logo">
           {{ if isset .Site.Params "logoimage" }}
-            <img src="{{ .Site.BaseURL }}{{ .Site.Params.logoimage }}">
+            <img src="{{ .Site.BaseURL }}{{ .Site.Params.logoimage }}" width="300" height="50">
           {{ else }}
-            <img src="{{ .Site.BaseURL }}img/crab-logo.png">
+            <img src="{{ .Site.BaseURL }}img/crab-logo.png" >
           {{ end }}
         </div>
 
