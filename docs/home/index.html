@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Seastar</title>
+    <link rel="stylesheet" href="https://example.comcss/crab.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+    <meta name="generator" content="Hugo 0.36" />
+
+
+
+    
+
+  </head>
+  <body>
+
+    <div id="container">
+
+      <div id="header">
+
+        <div id="site-logo">
+          
+            <img src="https://example.comimg/crab-logo.png">
+          
+        </div>
+
+	<div id="site-title"><a href="https://example.com">Seastar</a></div>
+	<div id="site-slogan">The Official Website for the Seastar Project</div>
+
+      </div>
+
+            <nav>
+	<ul class="first">
+          
+            <li><a href="/">Home</a>
+	    
+	    </li>
+	  
+            <li><a href="/blog/">Blog</a>
+	    
+	    </li>
+	  
+            <li><a href="/design/">Shared-nothing Design</a>
+	    
+	    </li>
+	  
+            <li><a href="/documentation/">Documentation</a>
+	    
+	    </li>
+	  
+            <li><a href="/faq/">Frequently Asked Questions</a>
+	    
+	    </li>
+	  
+            <li><a href="/contact/">ScyllaDB</a>
+	    
+	    </li>
+	  
+	</ul>
+      </nav>
+
+
+      <div id="content">
+
+        <div id="article">
+	  <h1>Home</h1>
+
+
+
+
+<p>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.</p>
+
+<h1 id="performance">Performance</h1>
+
+<p><img src="/seastar-httpd-throughput.png" alt="httpd-throughput" />
+<img src="/seastar-memcache.png" alt="memcache" /></p>
+
+<p>In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.</p>
+
+<p><a href="http://www.seastar-project.org/http-performance/">Details on HTTP performance</a> data are also available.</p>
+
+<h1 id="about">About</h1>
+
+<p>Seastar is the first framework to bring together a set of extreme architectural innovations, including:</p>
+
+<ul>
+<li>Shared-nothing design: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
+<li>High-performance networking: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</li>
+<li>Futures and promises: an advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.</li>
+<li>Message passing: a design for sharing information between CPU cores without time-consuming locking</li>
+</ul>
+
+<h1 id="getting-started-with-seastar">Getting started with Seastar</h1>
+
+<p>Source code is available from the <a href="https://github.com/scylladb/seastar">Seastar repository on GitHub</a>.</p>
+
+<p><a href="http://docs.seastar-project.org/">Seastar documentation</a> is available on the web or within the source code.</p>
+
+<p><a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev</a> is the project mailing list.</p>
+
+<p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
+
+
+        </div>
+
+      </div>
+
+      <div id="footer">
+        Copyright 2018 ScyllaDB
+      </div>
+
+    </div>
+
+  </body>
+</html>
+
