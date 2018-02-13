@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/2018/02/test/</loc>
+    <loc>https://rusher81572.github.io/seastar/blog/2018/02/test/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>/home/</loc>
+    <loc>https://rusher81572.github.io/seastar/home/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/networking/</loc>
+    <loc>https://rusher81572.github.io/seastar/networking/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/shared-nothing/</loc>
+    <loc>https://rusher81572.github.io/seastar/shared-nothing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/blog/1/01/a-page-with-tags/</loc>
+    <loc>https://rusher81572.github.io/seastar/blog/1/01/a-page-with-tags/</loc>
   </url>
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/crab/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/hugo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
+    <loc>https://rusher81572.github.io/seastar/blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://rusher81572.github.io/seastar/tags/crab/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/tags/theme/</loc>
+    <loc>https://rusher81572.github.io/seastar/tags/hugo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rusher81572.github.io/seastar/</loc>
+    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rusher81572.github.io/seastar/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rusher81572.github.io/seastar/tags/theme/</loc>
     <priority>0</priority>
   </url>
   
