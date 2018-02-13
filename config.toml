@@ -12,7 +12,7 @@ copyright = "ScyllaDB"
 
 
 [permalinks]
-blog  = "/blog/:year/:month/:title/"
+blog  = "/seastar/blog/:year/:month/:title/"
 
 [taxonomies]
 tags = "tags"
@@ -25,7 +25,7 @@ url = "/"
 [[menu.main]]
 weight = 2
 name = "Blog"
-url = "/blog/"
+url = "/seastar/blog/"
 
 
 [[menu.main]]
