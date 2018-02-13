@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seastar</title>
-    <link>https://rusher81572.github.io/seastar/</link>
+    <link>/</link>
     <description>Recent content on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Feb 2018 08:02:27 -0800</lastBuildDate>
     
-	<atom:link href="https://rusher81572.github.io/seastar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Test</title>
-      <link>https://rusher81572.github.io/seastar/blog/2018/02/test/</link>
+      <link>/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/blog/2018/02/test/</guid>
+      <guid>/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Home</title>
-      <link>https://rusher81572.github.io/seastar/home/</link>
+      <link>/home/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/home/</guid>
+      <guid>/home/</guid>
       <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
 Performance In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 Details on HTTP performance data are also available.
@@ -34,20 +34,20 @@ About Seastar is the first framework to bring together a set of extreme architec
     
     <item>
       <title>Networking</title>
-      <link>https://rusher81572.github.io/seastar/networking/</link>
+      <link>/networking/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/networking/</guid>
+      <guid>/networking/</guid>
       <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
  DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
     </item>
     
     <item>
       <title>Shared-nothing Design</title>
-      <link>https://rusher81572.github.io/seastar/shared-nothing/</link>
+      <link>/shared-nothing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/shared-nothing/</guid>
+      <guid>/shared-nothing/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
 Core counts grow, clock speeds stay constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>
@@ -55,10 +55,10 @@ On new hardware, the performance of standard workloads depends more on locking a
     
     <item>
       <title>A Page With Tags</title>
-      <link>https://rusher81572.github.io/seastar/blog/1/01/a-page-with-tags/</link>
+      <link>/blog/1/01/a-page-with-tags/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/blog/1/01/a-page-with-tags/</guid>
+      <guid>/blog/1/01/a-page-with-tags/</guid>
       <description></description>
     </item>
     
