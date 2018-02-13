@@ -12,21 +12,21 @@
     
     
     <item>
-      <title>First Blog</title>
-      <link>https://rusher81572.github.io/seastar/blog/2018/02/first-blog/</link>
+      <title>Test</title>
+      <link>https://rusher81572.github.io/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/blog/2018/02/first-blog/</guid>
-      <description>My First Blog</description>
+      <guid>https://rusher81572.github.io/seastar/blog/2018/02/test/</guid>
+      <description>Hello</description>
     </item>
     
     <item>
-      <title>My Second Blog</title>
-      <link>https://rusher81572.github.io/seastar/blog/2018/02/my-second-blog/</link>
-      <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
+      <title>A Page With Tags</title>
+      <link>https://rusher81572.github.io/seastar/blog/1/01/a-page-with-tags/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rusher81572.github.io/seastar/blog/2018/02/my-second-blog/</guid>
-      <description>Hello</description>
+      <guid>https://rusher81572.github.io/seastar/blog/1/01/a-page-with-tags/</guid>
+      <description></description>
     </item>
     
   </channel>
