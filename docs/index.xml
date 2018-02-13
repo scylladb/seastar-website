@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seastar</title>
-    <link>/</link>
+    <link>/seastar/</link>
     <description>Recent content on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Feb 2018 08:02:27 -0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/seastar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>My First Post</title>
-      <link>/blog/2018/02/my-first-post/</link>
+      <link>/seastar/blog/2018/02/my-first-post/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/my-first-post/</guid>
+      <guid>/seastar/blog/2018/02/my-first-post/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Test</title>
-      <link>/blog/2018/02/test/</link>
+      <link>/seastar/blog/2018/02/test/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/blog/2018/02/test/</guid>
+      <guid>/seastar/blog/2018/02/test/</guid>
       <description>Hello</description>
     </item>
     
     <item>
       <title>Home</title>
-      <link>/home/</link>
+      <link>/seastar/home/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/home/</guid>
+      <guid>/seastar/home/</guid>
       <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
 Performance In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 Details on HTTP performance data are also available.
@@ -43,10 +43,10 @@ About Seastar is the first framework to bring together a set of extreme architec
     
     <item>
       <title>Shared-nothing Design</title>
-      <link>/design/</link>
+      <link>/seastar/design/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/design/</guid>
+      <guid>/seastar/design/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
 Core counts grow, clock speeds stay constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>
