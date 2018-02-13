@@ -7,7 +7,7 @@ publishDir = "docs"
 
 [params]
 description = "The Official Website for the Seastar Project"
-logoimage = "/logo.png"
+logoimage = "logo.png"
 copyright = "ScyllaDB"
 
 
