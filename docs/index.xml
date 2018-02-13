@@ -96,6 +96,17 @@ About Seastar is the first framework to bring together a set of extreme architec
     </item>
     
     <item>
+      <title>Message Passing</title>
+      <link>/seastar/message-passing/</link>
+      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
+      
+      <guid>/seastar/message-passing/</guid>
+      <description>Threaded applications require inherently expensive locking operations, while the Seastar model can completely avoid locks for cross-CPU communications.
+From the programmer’s point of view, Seastar uses futures, promises, and continuations (f/p/c). Where conventional event-driven programming using epoll and userspace libraries such as libevent has made it very difficult to write complex applications, f/p/c makes it easier to write complex asynchronous code.
+For example, the following interaction between a sender core, C0, and a receiver core, C1, can take place with no locking required.</description>
+    </item>
+    
+    <item>
       <title>Networking</title>
       <link>/seastar/networking/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
