@@ -33,4 +33,6 @@ Source code is available from the [Seastar repository on GitHub](https://github.
 
 [seastar-dev](https://groups.google.com/forum/?hl=en#!forum/seastar-dev) is the project mailing list.
 
+Next: [shared-nothing design](/seastar/design)
+
 Follow [@ScyllaDB](https://twitter.com/ScyllaDB) on Twitter for more info.
