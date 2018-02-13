@@ -9,8 +9,8 @@ draft = false
 Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
 
 # Performance
-![httpd-throughput](/seastar-httpd-throughput.png)
-![memcache](/seastar-memcache.png)
+![httpd-throughput](/seastar/seastar-httpd-throughput.png)
+![memcache](/seastar/seastar-memcache.png)
 
 In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 
