@@ -7,7 +7,7 @@ By Alexander Gallego
 
 This is a cross-post from [Alexander's Blog](https://www.alexgallego.org/concurrency/smf/2017/12/17/future.html).
 
-On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search for a quick open desk to do some work, I volunteered open spaces we had at Concord1. We talked lock-free algorithms, memory reclamation techniques, threading models, Concord and distributed streaming engines, even C vs C++. Five hours later I was convinced that Seastar was the best systems framework I’d ever come across.
+On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search for a quick open desk to do some work, I volunteered open spaces we had at Concord[^1]. We talked lock-free algorithms, memory reclamation techniques, threading models, Concord and distributed streaming engines, even C vs C++. Five hours later I was convinced that Seastar was the best systems framework I’d ever come across.
 
 I’ve now been using Seastar for almost two years and I haven’t changed my mind.
 
