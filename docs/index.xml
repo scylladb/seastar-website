@@ -103,9 +103,8 @@ This benchmark uses two identical Intel® Server System R2000WT servers.
       
       <guid>/seastar/home/</guid>
       <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in ScyllaDB, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
-Performance In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
-Details on HTTP performance data are also available.
-About Seastar is the first framework to bring together a set of extreme architectural innovations, including:</description>
+Seastar is the first framework to bring together a set of extreme architectural innovations, including:
+ Shared-nothing design: Seastar uses a shared-nothing model that shards all requests onto individual cores. High-performance networking: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</description>
     </item>
     
     <item>
@@ -127,6 +126,16 @@ For example, the following interaction between a sender core, C0, and a receiver
       <guid>/seastar/networking/</guid>
       <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
  DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
+    </item>
+    
+    <item>
+      <title>Seastar Applications</title>
+      <link>/seastar/seastar-applications/</link>
+      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
+      
+      <guid>/seastar/seastar-applications/</guid>
+      <description>While many applications can benefit from high performance, Seastar is currently focused on high-throughput, low-latency I/O intensive applications.
+ Pedis: Redis-compatible data structure store Scylla: NoSQL column-store database, compatible with Apache Cassandra at 10x the throughput Seastar HTTPD: web server Seastar Memcached: a fast server for the Memcache key-value store  </description>
     </item>
     
     <item>
