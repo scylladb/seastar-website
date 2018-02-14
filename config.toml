@@ -65,7 +65,7 @@ url = "/seastar-applications"
 [[menu.main]]
 weight = 4
 name = "Documentation"
-url = "/documentation/"
+url = "http://docs.seastar-project.org/master/index.html"
 identifier = "documentation"
 
 [[menu.main]]
