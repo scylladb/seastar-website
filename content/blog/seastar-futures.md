@@ -2,6 +2,7 @@
 title: "Seastar: The future<> is Here"
 date: 2018-02-13T08:02:27-08:00
 ---
+![image](/seastar/images/alex-seastar-6.png)
 By Alexander Gallego
 
 This is a cross-post from [Alexander's Blog](https://www.alexgallego.org/concurrency/smf/2017/12/17/future.html).
