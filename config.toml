@@ -6,13 +6,10 @@ publishDir = "docs"
 baseurl = "/seastar/"
 #baseurl = "/"
 
-
 [params]
 description = "The Official Website for the Seastar Project"
 logoimage = "logo.png"
 copyright = "ScyllaDB"
-
-
 
 [permalinks]
 blog  = "/blog/:year/:month/:title/"
@@ -79,4 +76,4 @@ url = "/faq"
 [[menu.main]]
 weight = 6
 name = "ScyllaDB"
-url = "/contact/"
+url = "https://www.scylladb.com/"
