@@ -94,27 +94,27 @@ Want to learn more about Seastar and smf? Please check out my [talk](https://www
 
 ### References 
 
-[^1]: concord – my previous startup.
-[^2]: future header file.
-[^3]: csp – t hoare.
-[^4]: herb sutter – free lunch is over.
-[^5]: akka – actor framework for the jvm.
-[^6]: orleans – actor framework by Microsoft.
-[^7]: pony – actor language.
-[^8]: erlang – distributed programming lang.
-[^9]: continuations docs.
-[^10]: parallelism is a free variable.
-[^11]: seastar shared nothing.
-[^12]: seastar networking.
-[^13]: seastar promises.
-[^14]: seastar message passing.
-[^15]: facebook’s folly::futures.
-[^16]: facebook wangle.
-[^17]: on-thread-safe shared ptr.
-[^18]: seastar::sstring – string with small type optimization.
-[^19]: std::basic_string.
-[^20]: seastar::temporary_buffer.
-[^21]: smf – the fastest RPC in the west.
+[^1]: [concord](http://concord.io/) – my previous startup.
+[^2]: [future header file](https://github.com/scylladb/seastar/blob/master/core/future.hh).
+[^3]: [csp – t hoare](http://weblab.cs.uml.edu/~bill/cs515/CSP_Hoare_78.pdf).
+[^4]: [herb sutter](https://www.cs.utexas.edu/~lin/cs380p/Free_Lunch.pdf) – free lunch is over.
+[^5]: [akka](http://akka.io/) – actor framework for the jvm.
+[^6]: [orleans](https://github.com/dotnet/orleans) – actor framework by Microsoft.
+[^7]: [pony](https://www.ponylang.org/) – actor language.
+[^8]: [erlang](https://www.erlang.org/) – distributed programming lang.
+[^9]: [continuations docs](https://github.com/scylladb/seastar/blob/master/doc/tutorial.md#continuations).
+[^10]: [parallelism  is a free variable](https://www.youtube.com/watch?v=cN_DpYBzKso).
+[^11]: [seastar shared nothing](http://www.seastar-project.org/shared-nothing/).
+[^12]: [seastar networking](http://www.seastar-project.org/networking/).
+[^13]: [seastar promises](http://www.seastar-project.org/futures-promises/).
+[^14]: [seastar message passing](http://www.seastar-project.org/message-passing/).
+[^15]: [facebook’s folly::futures](https://github.com/facebook/folly).
+[^16]: [facebook wangle](https://github.com/facebook/wangle).
+[^17]: [on-thread-safe shared ptr]().
+[^18]: [seastar::sstring](https://github.com/scylladb/seastar/blob/40a68fa50ebeeb17cd3797af7cddbbcdf07ce61a/core/sstring.hh) – string with small type optimization.
+[^19]: [std::basic_string](https://gcc.gnu.org/onlinedocs/gcc-6.2.0/libstdc++/api/a01076_source.html).
+[^20]: [seastar::temporary_buffer](https://github.com/scylladb/seastar/blob/743723fc79d8f40a926908181026a709a8cbe719/core/temporary_buffer.hh).
+[^21]: [smf](https://github.com/senior7515/smf) – the fastest RPC in the west.
 
 
 
