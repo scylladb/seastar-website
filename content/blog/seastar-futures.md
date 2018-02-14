@@ -13,7 +13,7 @@ I’ve now been using Seastar for almost two years and I haven’t changed my mi
 
 ### The future<> is all about concurrency
 
-For the truly impatient, the future<> is [here](https://github.com/scylladb/seastar/blob/master/core/future.hh)
+For the truly impatient, the future<> is here [^2].
 
 In 1978 news[^3], T. Hoare prophetically said the future was about computers getting more cores and not increasing in clock speed. In 2004 Herb Sutter coined the same trend as The Free Lunch is Over4. The ```seastar::future<>``` is a tool to take advantage of multi-core, multi-socket machines – a way to structure your software to grow gracefully with your hardware. There are many other tools that fit this new modality, from lock-free algorithms and to co-routines, to channels[^3], not to mention actor-style message passing, among many other paradigms like full-on distributed programming languages. [^5][^6][^7][^8]
 
