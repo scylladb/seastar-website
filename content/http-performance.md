@@ -28,5 +28,3 @@ This benchmark uses two identical [Intel® Server System R2000WT](http://www.int
 * Default BIOS settings (TurboBoost enabled, HyperThreading enabled)
 
 Full list of commands for reproducing this benchmark available on the [Seastar wiki: HTTPD Benchmark](https://github.com/scylladb/seastar/wiki/HTTPD-benchmark) page.
-
-**Next**: [shared-nothing design](/seastar/shared-nothing)

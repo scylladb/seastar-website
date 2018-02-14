@@ -65,5 +65,3 @@ int main(int ac, char** av) {
 }
 ```
 More examples are available in the Seastar online documentation on futures and promises.
-
-**Next:** [Message Passing](/seastar/message-passing)

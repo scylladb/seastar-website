@@ -49,5 +49,3 @@ Behind the scenes, quite a lot is happening. A ```.then()``` function may decide
 
 # Simplified testing and troubleshooting
 Parallel programming is a rare developer skill that is coming into higher and higher demand with increases in CPU counts and workload parallelization. While efficient use of CPU time is necessary, efficient use of programmer time is even more important for most projects. Seastar is the only framework that implements both world-class performance and a comprehensible, testable developer experience.
-
-**Next**: [Seastar Home](/seastar)

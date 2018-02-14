@@ -11,8 +11,8 @@ Seastar is the first framework to bring together a set of extreme architectural 
 
 * [Shared-nothing design](/seastar/shared-nothing): Seastar uses a shared-nothing model that shards all requests onto individual cores.
 * [High-performance networking](/seastar/networking): Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.
-* [Futures and promises](/seastar/futures-promises): an advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.
-* [Message passing](/seastar/message-passing): a design for sharing information between CPU cores without time-consuming locking
+* [Futures and promises](/seastar/futures-promises): An advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.
+* [Message passing](/seastar/message-passing): A design for sharing information between CPU cores without time-consuming locking
 
 # Getting Started with Seastar
 

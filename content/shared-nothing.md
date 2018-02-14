@@ -47,6 +47,3 @@ smp::submit_to(neighbor, [key] {
 The equivalent in a threaded environment requires taking a lock around the database object. The locking operation is inherently expensive and can also force a context switch or waste CPU cycles in spinning, depending on the locking scheme used.
 
 Other variants of cross-core communication allow for broadcast of a value to all CPUs, or a map/reduce operation that sends a lambda to all CPUs, collects results, and applies a transformation to reduce to a single value.
-
-**Next:** [high-performance networking](/seastar/networking)
-
