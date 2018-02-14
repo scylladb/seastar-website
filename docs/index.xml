@@ -75,6 +75,17 @@
     </item>
     
     <item>
+      <title>Frequently Asked Questions</title>
+      <link>/seastar/faq/</link>
+      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
+      
+      <guid>/seastar/faq/</guid>
+      <description>What’s the Difference Between the Seastar Model and the Reactive Programming Model? Seastar futures/promises/continuations (f-p-c) are a subset of reactive programming.
+Seastar performance derives from the sharded, cooperative, non-blocking, micro-task scheduled design, and f-p-c are a friendlier way of feeding tasks to the scheduler.
+Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. They trade off thread safety, which is unneeded due to the sharded design, for scheduling efficiency, and have a very low memory footprint.</description>
+    </item>
+    
+    <item>
       <title>Futures and Promises</title>
       <link>/seastar/futures-promises/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>

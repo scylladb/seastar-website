@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Seastar - Seastar</title>
+    <title>Frequently Asked Questions - Seastar</title>
     <link rel="stylesheet" href="/seastar/css/crab.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
     <meta name="generator" content="Hugo 0.36" />
@@ -86,42 +86,40 @@
       <div id="content">
 
         <div id="article">
-	  <h1>Seastar</h1>
+	  <h1>Frequently Asked Questions</h1>
 
-  
-    
 
-<p>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in <a href="http://www.scylladb.com/">ScyllaDB</a>, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on <a href="http://kernel.org/">Linux</a> or <a href="http://osv.io/">OSv</a>.</p>
 
-<p>Seastar is the first framework to bring together a set of extreme architectural innovations, including:</p>
 
-<ul>
-<li><a href="/seastar/shared-nothing">Shared-nothing design</a>: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
-<li><a href="/seastar/networking">High-performance networking</a>: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</li>
-<li><a href="/seastar/futures-promises">Futures and promises</a>: An advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.</li>
-<li><a href="/seastar/message-passing">Message passing</a>: A design for sharing information between CPU cores without time-consuming locking</li>
-</ul>
+<h3 id="what-s-the-difference-between-the-seastar-model-and-the-reactive-programming-model">What’s the Difference Between the Seastar Model and the Reactive Programming Model?</h3>
 
-<h1 id="getting-started-with-seastar">Getting Started with Seastar</h1>
+<p>Seastar futures/promises/continuations (f-p-c) are a subset of reactive programming.</p>
 
-<p>Source code is available from the <a href="https://github.com/scylladb/seastar">Seastar repository on GitHub</a>.</p>
+<p>Seastar performance derives from the sharded, cooperative, non-blocking, micro-task scheduled design, and f-p-c are a friendlier way of feeding tasks to the scheduler.</p>
 
-<p><a href="http://docs.seastar-project.org/">Seastar documentation</a> is available on the web or within the source code.</p>
+<p>Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. They trade off thread safety, which is unneeded due to the sharded design, for scheduling efficiency, and have a very low memory footprint.</p>
 
-<p><a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev</a> is the project mailing list.</p>
+<h3 id="how-is-seastar-different-from-mtcp">How is Seastar Different from mTCP?</h3>
 
-<p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
+<p>mTCP is a user-level TCP stack written over DPDK (or netmap). It aims to solve many of the same problems that Seastar does, including CPU-locality of connections, unnecessary locks and sharing, and system call overhead. mTCP provides a new application API, but does not provide a new framework to manage asynchrony the way that Seastar does.</p>
 
-<h1 id="performance">Performance</h1>
+<h3 id="what-version-of-dpdk-does-seastar-work-with">What Version of DPDK does Seastar Work With?</h3>
 
-<p><img src="/seastar/seastar-httpd-throughput.png" alt="httpd-throughput" />
-<img src="/seastar/seastar-memcache.png" alt="memcache" /></p>
+<p>Seastar requires DPDK version 1.8.0 or later.</p>
 
-<p>In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.</p>
+<h3 id="is-seastar-available-as-a-package-for-any-linux-distribution">Is Seastar Available as a Package for any Linux Distribution?</h3>
 
-<p><a href="/seastar/http-performance/">Details on HTTP performance</a> data are also available.</p>
+<p>Not yet. If you are interested in packaging Seastar for your favorite distribution, please post to the list.</p>
 
-  
+<h3 id="what-is-the-seastar-license">What is the Seastar License?</h3>
+
+<p>Seastar is open source, and released under the Apache License, Version 2.0.</p>
+
+<h3 id="where-can-i-ask-a-question-not-covered-here">Where can I ask a question not covered here?</h3>
+
+<p>Post to the <a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev mailing list</a>.</p>
+
+
 </div>
 
 </div>
