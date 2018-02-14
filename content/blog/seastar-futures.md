@@ -65,7 +65,7 @@ They, of course, cover all the basics for high-performance applications:
  *Figure 1: Seastar Mental Model. Everything in Seastar happens in a `thread_local’ (per hyper-thread) with the exception of explicit cross-core communication. As with all mental models, this is a simplification and omits details.*
 
 IRL Impact
-I’ve been using Seastar for a year and a half on a project called smf21 and it has been eye-opening.
+I’ve been using Seastar for a year and a half on a project called smf[^21] and it has been eye-opening.
 
 ```
 smf git:(master) cloc --vcs=git                                                        
