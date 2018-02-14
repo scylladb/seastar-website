@@ -20,6 +20,7 @@ In 1978 news[^3], T. Hoare prophetically said the future was about computers get
 ```“Instead of driving clock speeds and straight-line instruction throughput ever higher, they are instead turning en masse to hyperthreading and multicore architectures”``` – Herb Sutter
 
 ```seastar::future<>```’s are for concurrent software construction. In addition, their design makes them composable. You can take any two futures and chain them together via ```.then()``` operator and yield a new future[^9]. Although you can combine, mix, map-reduce, filter, chain, fail, complete, generate, fulfill, sleep, expire futures, etc, they are fundamentally about program structure. Such program structure can execute in parallel, but doesn’t have to. When you have concurrent structure, parallelism is a free variable[^10]. That is to say, you can turn up or down the number of ```simultaneous``` execution units/cores/threads without changing your program. In this paradigm, you worry about correct program structure and someone else worries about the execution.
+
 ![image](/seastar/images/alex-seastar-1.png)
 
 Seastar is an intrusive building block. Once you start composing Seastar-driven asynchronous building blocks, you have to go out of your way – really – to build anything synchronous, and that’s powerful. Structurally, Seastar has the same effect as actor frameworks like Akka5, Orleans[^6], or even languages like Pony[^7] or Erlang[^8] have. Once you have an actor, they spread **virally** through your system making everything an actor.
