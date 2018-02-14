@@ -4,7 +4,7 @@ theme = "crab"
 #baseurl = "https://rusher81572.github.io/seastar/"
 baseurl = "/seastar/"
 #baseurl = "/"
-publishDir = "docs"
+#publishDir = "docs"
 
 [params]
 description = "The Official Website for the Seastar Project"
@@ -26,23 +26,56 @@ url = "/"
 
 [[menu.main]]
 weight = 2
-name = "Blog"
-url = "/blog/"
+name = "Architecture"
+url = "/"
 
+[[menu.main]]
+parent = "Architecture"
+weight = 2
+name = "Shared-Nothing"
+url = "/shared-nothing"
+identifier = "nested-menus"
+
+[[menu.main]]
+parent = "Architecture"
+weight = 2
+name = "Networking"
+url = "/networking"
+
+[[menu.main]]
+parent = "Architecture"
+weight = 2
+name = "Futures and Promises"
+url = "/futures-promises"
+
+[[menu.main]]
+parent = "Architecture"
+weight = 2
+name = "Message Passing"
+url = "/message-passing"
 
 [[menu.main]]
 weight = 3
+name = "Blog"
+url = "/blog/"
+
+[[menu.main]]
+weight = 3
+name = "Seastar Applications"
+url = "/seastar-applications"
+
+[[menu.main]]
+weight = 4
 name = "Documentation"
 url = "/documentation/"
 identifier = "documentation"
 
 [[menu.main]]
-weight = 4
+weight = 5
 name = "Frequently Asked Questions"
 url = "/faq/"
 
-
 [[menu.main]]
-weight = 5
+weight = 6
 name = "ScyllaDB"
 url = "/contact/"

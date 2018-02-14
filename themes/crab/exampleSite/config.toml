@@ -33,12 +33,11 @@ identifier = "features"
   parent = "features"
   weight = 1
   name = "Responsive design"
-  url = "/features/responsive-design/"
   [[menu.main]]
   parent = "features"
   weight = 2
   name = "Nested menus"
-  url = "/features/nested-menus/"
+  url = "/seastar/shared-nothing"
   identifier = "nested-menus"
     [[menu.main]]
     parent = "nested-menus"
