@@ -1,10 +1,11 @@
 languageCode = "en-us"
 title = "Seastar"
 theme = "crab"
-#baseurl = "https://rusher81572.github.io/seastar/"
-baseurl = "/seastar/"
-#baseurl = "/"
 publishDir = "docs"
+#baseurl = "https://rusher81572.github.io/seastar/"
+#baseurl = "/seastar/"
+baseurl = "/"
+
 
 [params]
 description = "The Official Website for the Seastar Project"
@@ -73,7 +74,7 @@ identifier = "documentation"
 [[menu.main]]
 weight = 5
 name = "Frequently Asked Questions"
-url = "/faq/"
+url = "/faq"
 
 [[menu.main]]
 weight = 6
