@@ -105,12 +105,12 @@
 
 <p>For the truly impatient, the future&lt;&gt; is <a href="https://github.com/scylladb/seastar/blob/master/core/future.hh">here</a></p>
 
-<p>In 1978 <a href="http://weblab.cs.uml.edu/~bill/cs515/CSP_Hoare_78.pdf">news</a>, T. Hoare prophetically said the future was about computers getting more cores and not increasing in clock speed. In 2004 Herb Sutter coined the same trend as The Free Lunch is Over4. The <code>seastar::future&lt;&gt;</code> is a tool to take advantage of multi-core, multi-socket machines – a way to structure your software to grow gracefully with your hardware. There are many other tools that fit this new modality, from lock-free algorithms and to co-routines, to channels<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">1</a></sup>, not to mention actor-style message passing, among many other paradigms like full-on distributed programming languages. <sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">2</a></sup><sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">3</a></sup><sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">4</a></sup><sup class="footnote-ref" id="fnref:8"><a rel="footnote" href="#fn:8">5</a></sup></p>
+<p>In 1978 news<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">1</a></sup>, T. Hoare prophetically said the future was about computers getting more cores and not increasing in clock speed. In 2004 Herb Sutter coined the same trend as The Free Lunch is Over4. The <code>seastar::future&lt;&gt;</code> is a tool to take advantage of multi-core, multi-socket machines – a way to structure your software to grow gracefully with your hardware. There are many other tools that fit this new modality, from lock-free algorithms and to co-routines, to channels<sup class="footnote-ref" id="fnref:3"><a rel="footnote" href="#fn:3">1</a></sup>, not to mention actor-style message passing, among many other paradigms like full-on distributed programming languages. <sup class="footnote-ref" id="fnref:5"><a rel="footnote" href="#fn:5">2</a></sup><sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">3</a></sup><sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">4</a></sup><sup class="footnote-ref" id="fnref:8"><a rel="footnote" href="#fn:8">5</a></sup></p>
 
 <p><code>“Instead of driving clock speeds and straight-line instruction throughput ever higher, they are instead turning en masse to hyperthreading and multicore architectures”</code> – Herb Sutter</p>
 
 <p><code>seastar::future&lt;&gt;</code>’s are for concurrent software construction. In addition, their design makes them composable. You can take any two futures and chain them together via <code>.then()</code> operator and yield a new future<sup class="footnote-ref" id="fnref:9"><a rel="footnote" href="#fn:9">6</a></sup>. Although you can combine, mix, map-reduce, filter, chain, fail, complete, generate, fulfill, sleep, expire futures, etc, they are fundamentally about program structure. Such program structure can execute in parallel, but doesn’t have to. When you have concurrent structure, parallelism is a free variable<sup class="footnote-ref" id="fnref:10"><a rel="footnote" href="#fn:10">7</a></sup>. That is to say, you can turn up or down the number of <code>simultaneous</code> execution units/cores/threads without changing your program. In this paradigm, you worry about correct program structure and someone else worries about the execution.
-<img src="/seastar/images/alex-seastar-1.png" alt="httpd-throughput" /></p>
+<img src="/seastar/images/alex-seastar-1.png" alt="image" /></p>
 
 <p>Seastar is an intrusive building block. Once you start composing Seastar-driven asynchronous building blocks, you have to go out of your way – really – to build anything synchronous, and that’s powerful. Structurally, Seastar has the same effect as actor frameworks like Akka5, Orleans<sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">3</a></sup>, or even languages like Pony<sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">4</a></sup> or Erlang<sup class="footnote-ref" id="fnref:8"><a rel="footnote" href="#fn:8">5</a></sup> have. Once you have an actor, they spread <strong>virally</strong> through your system making everything an actor.</p>
 
@@ -128,6 +128,65 @@
 </ul>
 
 <p>… but it is much more, so let’s get technical and find out how Seastar executes these concurrency building blocks.</p>
+
+<h3 id="enter-seastar-at-your-own-risk-you-might-not-come-back">Enter Seastar… at your own risk, you might not come back</h3>
+
+<p>In a past life, I helped build Concord.io with facebook’s folly::futures<sup class="footnote-ref" id="fnref:15"><a rel="footnote" href="#fn:15">12</a></sup>, and wangle<sup class="footnote-ref" id="fnref:16"><a rel="footnote" href="#fn:16">13</a></sup> for networking and async execution. While these libraries enabled us to deliver high-performance code using similar primitives, their use of asynchronous operations is not as pervasive as that of Seastar. They are libraries and not frameworks, which is the first distinction. That is, you can use the parts of the libraries that you need without needing to include or use the rest. You can tick your own clocks, your own IOEventLoops, your own CPU Scheduling, your own <code>syscall()</code> thread pool, etc. Seastar, on the contrary, tells you that you have to operate within their framework. It is not possible to take parts of Seastar and use them on your code base without the IO subsystem or the CPU subsystem.</p>
+
+<p>While this decision seems like a disadvantage, it is actually an enforcer of asynchronicity – very much like actors. It is front and center to everything you do. This is a good thing.</p>
+
+<h3 id="no-locks-atomics-cache-polluting-primitives">No locks, atomics, cache polluting primitives</h3>
+
+<p>Seastar takes one extreme approach to data locality. It uses almost no locks, atomics, or in any way implicit memory sharing with other cores. Your view into any application starts with a <code>seastar::distributed&lt;T&gt;</code> type. This means a copy of the T is thread local.</p>
+
+<p>They, of course, cover all the basics for high-performance applications:</p>
+
+<ul>
+<li>Small type optimizations (although <code>seastar::small_set&lt;T&gt;</code> and <code>seastar::small_map&lt;K,V&gt;</code> are missing).</li>
+<li>Non thread safe non-polymorphic shared pointer (local to core) via <code>seastar::lw_shared_ptr&lt;T&gt;</code><sup class="footnote-ref" id="fnref:17"><a rel="footnote" href="#fn:17">14</a></sup></li>
+<li>Non-thread safe polymorphic shared pointer (local to core) via seastar::shared_ptr<T></li>
+<li>String with small type optimizations<sup class="footnote-ref" id="fnref:18"><a rel="footnote" href="#fn:18">15</a></sup> nor atomics like the libc++<sup class="footnote-ref" id="fnref:19"><a rel="footnote" href="#fn:19">16</a></sup></li>
+<li>Move only bag-o’-bytes<sup class="footnote-ref" id="fnref:20"><a rel="footnote" href="#fn:20">17</a></sup></li>
+<li>Circular buffers</li>
+<li>Linux DAIO</li>
+<li>and many many more!</li>
+</ul>
+
+<h3 id="a-mental-model">A mental model</h3>
+
+<p><img src="/seastar/images/alex-seastar-2.png" alt="image" /></p>
+
+<p>Figure 1: Seastar Mental Model. Everything in Seastar happens in a `thread_local’ (per hyper-thread) with the exception of explicit cross-core communication. As with all mental models, this is a simplification and omits details.</p>
+
+<p>IRL Impact
+I’ve been using Seastar for a year and a half on a project called smf21 and it has been eye-opening.</p>
+
+<pre><code>smf git:(master) cloc --vcs=git                                                        
+--------------------------------------------------------------------------------
+Language                      files          blank        comment           code
+--------------------------------------------------------------------------------
+C++                              61            712            512           3607
+C/C++ Header                     77            650            824           2761
+</code></pre>
+
+<p>smf is a set of libraries and utilities (like boost:: for C++ or guava for java) designed to be the building blocks of your next distributed systems.</p>
+
+<p>Current benchmarks in microseconds make smf’s RPC (Seastar-backed through DPDK) the lowest tail latency system I’ve tested – including gRPC, Thrift, Cap n’Proto, etc. What matters, however, is not that I’ve managed to build a fast RPC, but the fact that doing it with Seastar was no more work than doing the same thing with facebook::folly and facebook::wangle, boost::asio, or libevent.</p>
+
+<p><img src="/seastar/images/alex-seastar-3.png" alt="image" /></p>
+
+<p>In addition to the RPC, smf has its own Write Ahead Log (WAL).</p>
+
+<p>It is a write-ahead log modeled after an Apache Kafka-like interface or Apache Pulsar. It has topics, partitions, etc. It is designed to have a single reader/writer per topic/partition.</p>
+
+<p>Current benchmarks in milliseconds ==&gt; 41X faster than Apache Kafka
+<img src="/seastar/images/alex-seastar-4.png" alt="image" /></p>
+
+<p>These massive gains should be expected of many server-side applications.</p>
+
+<p>Want to learn more about Seastar and smf? Please check out my <a href="https://www.scylladb.com/tech-talk/smf-fastest-rpc-west-scylla-summit-2017/">talk</a> from Scylla Summit 2017 or visit the main Seastar and <a href="https://github.com/senior7515/smf">smf page</a>.</p>
+
+<h3 id="references">References</h3>
 <div class="footnotes">
 
 <hr />
@@ -155,6 +214,18 @@
  <a class="footnote-return" href="#fnref:13"><sup>[return]</sup></a></li>
 <li id="fn:14">seastar message passing.
  <a class="footnote-return" href="#fnref:14"><sup>[return]</sup></a></li>
+<li id="fn:15">facebook’s folly::futures.
+ <a class="footnote-return" href="#fnref:15"><sup>[return]</sup></a></li>
+<li id="fn:16">facebook wangle.
+ <a class="footnote-return" href="#fnref:16"><sup>[return]</sup></a></li>
+<li id="fn:17">on-thread-safe shared ptr.
+ <a class="footnote-return" href="#fnref:17"><sup>[return]</sup></a></li>
+<li id="fn:18">seastar::sstring – string with small type optimization.
+ <a class="footnote-return" href="#fnref:18"><sup>[return]</sup></a></li>
+<li id="fn:19">std::basic_string.
+ <a class="footnote-return" href="#fnref:19"><sup>[return]</sup></a></li>
+<li id="fn:20">seastar::temporary_buffer.
+ <a class="footnote-return" href="#fnref:20"><sup>[return]</sup></a></li>
 </ol>
 </div>
 
