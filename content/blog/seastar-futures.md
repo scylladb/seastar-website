@@ -104,10 +104,10 @@ Want to learn more about Seastar and smf? Please check out my [talk](https://www
 [^8]: [erlang](https://www.erlang.org/) – distributed programming lang.
 [^9]: [continuations docs](https://github.com/scylladb/seastar/blob/master/doc/tutorial.md#continuations).
 [^10]: [parallelism  is a free variable](https://www.youtube.com/watch?v=cN_DpYBzKso).
-[^11]: [seastar shared nothing](http://www.seastar-project.org/shared-nothing/).
-[^12]: [seastar networking](http://www.seastar-project.org/networking/).
-[^13]: [seastar promises](http://www.seastar-project.org/futures-promises/).
-[^14]: [seastar message passing](http://www.seastar-project.org/message-passing/).
+[^11]: [seastar shared nothing](/seastar/shared-nothing/).
+[^12]: [seastar networking](/seastar/networking/).
+[^13]: [seastar promises](/seastar/futures-promises/).
+[^14]: [seastar message passing](/seastar/message-passing/).
 [^15]: [facebook’s folly::futures](https://github.com/facebook/folly).
 [^16]: [facebook wangle](https://github.com/facebook/wangle).
 [^17]: [on-thread-safe shared ptr](https://github.com/scylladb/seastar/blob/master/core/shared_ptr.hh).
