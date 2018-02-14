@@ -8,7 +8,7 @@ baseurl = "/seastar/"
 
 [params]
 description = "The Official Website for the Seastar Project"
-logoimage = "logo.png"
+logoimage = "/images/logo.png"
 copyright = "ScyllaDB"
 
 [permalinks]

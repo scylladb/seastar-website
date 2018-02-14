@@ -6,7 +6,7 @@ draft = false
 
 Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.
 
-![httpd-throughput](/seastar/seastar-httpd-throughput.png)
+![image](/seastar/images/seastar-httpd-throughput.png)
 
 This benchmark uses two identical [Intel® Server System R2000WT](http://www.intel.com/p/en_US/support/category/server/r2000wt/doc_guide) servers.
 
