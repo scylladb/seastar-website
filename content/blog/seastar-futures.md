@@ -54,7 +54,7 @@ They, of course, cover all the basics for high-performance applications:
 * Non thread safe non-polymorphic shared pointer (local to core) via ```seastar::lw_shared_ptr<T>```[^17]
 * Non-thread safe polymorphic shared pointer (local to core) via seastar::shared_ptr<T>
 * String with small type optimizations[^18] nor atomics like the libc++[^19]
-* Move only bag-o’-bytes[^20]
+* Move only bag-o-bytes[^20]
 * Circular buffers
 * Linux DAIO
 * and many many more!
