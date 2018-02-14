@@ -23,5 +23,3 @@ By using a user-space TCP/IP stack that is implemented using Seastar basic primi
 An alternative user-space network toolkit, [DPDK](http://dpdk.org/), is designed specifically for fast packet processing, usually in less than 80 CPU cycles per packet. It integrates seamlessly with Linux in order to take advantage of high-performance hardware.
 
 Seastar is designed for future-proof development: you can build and run the same applications to run with the networking mode that works best at deployment time, instead of having to commit to economically unpredictable technology choices in advance.
-
-**Next:** [Futures and Promises](/seastar/futures-promises)
