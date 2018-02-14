@@ -5,7 +5,7 @@ draft = false
 +++
 
 
-Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in [ScyllaDB](http://www.scylladb.com/), a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on [Linux](http://kernel.org/) or [OSv](http://osv.io/).
+Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in [Scylla](http://www.scylladb.com/), a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on [Linux](http://kernel.org/) or [OSv](http://osv.io/).
 
 Seastar is the first framework to bring together a set of extreme architectural innovations, including:
 
