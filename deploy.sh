@@ -1,8 +1,9 @@
 #!/bin/bash
 hugo
 git add docs/*
-git commit docs/* -m fix;
-git commit blog/* -m fix;
+git commit condocs/* -m fix;
+git commit content/blog/* -m fix;
+git commit content/images/* -m fix;
 git commit -a -m fix;
 git push
 git status
