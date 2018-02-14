@@ -4,7 +4,7 @@ theme = "crab"
 #baseurl = "https://rusher81572.github.io/seastar/"
 baseurl = "/seastar/"
 #baseurl = "/"
-#publishDir = "docs"
+publishDir = "docs"
 
 [params]
 description = "The Official Website for the Seastar Project"
