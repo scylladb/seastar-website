@@ -3,64 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/seastar-website/blog/2018/02/seastar-the-future-is-here/</loc>
+    <loc>/blog/2018/02/seastar-the-future-is-here/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/faq/</loc>
+    <loc>/faq/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/futures-promises/</loc>
+    <loc>/futures-promises/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/http-performance/</loc>
+    <loc>/http-performance/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/home/</loc>
+    <loc>/home/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/message-passing/</loc>
+    <loc>/message-passing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/networking/</loc>
+    <loc>/networking/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/seastar-applications/</loc>
+    <loc>/seastar-applications/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/shared-nothing/</loc>
+    <loc>/shared-nothing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar-website/blog/</loc>
-    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/seastar-website/</loc>
+    <loc>/blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/seastar-website/tags/</loc>
+    <loc>/</loc>
+    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <priority>0</priority>
   </url>
   
