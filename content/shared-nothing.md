@@ -19,7 +19,7 @@ The networking and storage devices available on a modern system have also contin
 
 A 2GHz processor handling 1024-byte packets at wire speed on a 10GBps network has only 1670 clock cycles per packet. (source: [Intel DPDK Overview](http://www.intel.com/content/dam/www/public/us/en/documents/presentation/dpdk-packet-processing-ia-overview-presentation.pdf))
 <br>
-![image](/seastar/images/shared-nothing-design.png)
+![image](/images/shared-nothing-design.png)
 <br>
 ## The Seastar Model: Shared-nothing
 
