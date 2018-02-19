@@ -2,7 +2,7 @@
 title: "Seastar: The future<> is Here"
 date: 2018-02-13T08:02:27-08:00
 ---
-![image](/seastar/images/alex-seastar-5.jpg)
+![image](/images/alex-seastar-5.jpg)
 By Alexander Gallego
 
 This is a cross-post from [Alexander's Blog](https://www.alexgallego.org/concurrency/smf/2017/12/17/future.html).
@@ -21,7 +21,7 @@ In 1978 news[^3], T. Hoare prophetically said the future was about computers get
 
 ```seastar::future<>```’s are for concurrent software construction. In addition, their design makes them composable. You can take any two futures and chain them together via ```.then()``` operator and yield a new future[^9]. Although you can combine, mix, map-reduce, filter, chain, fail, complete, generate, fulfill, sleep, expire futures, etc, they are fundamentally about program structure. Such program structure can execute in parallel, but doesn’t have to. When you have concurrent structure, parallelism is a free variable[^10]. That is to say, you can turn up or down the number of ```simultaneous``` execution units/cores/threads without changing your program. In this paradigm, you worry about correct program structure and someone else worries about the execution.
 
-![image](/seastar/images/alex-seastar-1.png)
+![image](/images/alex-seastar-1.png)
 
 Seastar is an intrusive building block. Once you start composing Seastar-driven asynchronous building blocks, you have to go out of your way – really – to build anything synchronous, and that’s powerful. Structurally, Seastar has the same effect as actor frameworks like Akka5, Orleans[^6], or even languages like Pony[^7] or Erlang[^8] have. Once you have an actor, they spread **virally** through your system making everything an actor.
 
@@ -60,7 +60,7 @@ They, of course, cover all the basics for high-performance applications:
 * and many many more!
 
 ### A Mental Model
-![image](/seastar/images/alex-seastar-2.png)
+![image](/images/alex-seastar-2.png)
 
  *Figure 1: Seastar Mental Model. Everything in Seastar happens in a `thread_local’ (per hyper-thread) with the exception of explicit cross-core communication. As with all mental models, this is a simplification and omits details.*
 
@@ -79,14 +79,14 @@ smf is a set of libraries and utilities (like boost:: for C++ or guava for java)
 
 Current benchmarks in microseconds make smf’s RPC (Seastar-backed through DPDK) the lowest tail latency system I’ve tested – including gRPC, Thrift, Cap n’Proto, etc. What matters, however, is not that I’ve managed to build a fast RPC, but the fact that doing it with Seastar was no more work than doing the same thing with facebook::folly and facebook::wangle, boost::asio, or libevent.
 
-![image](/seastar/images/alex-seastar-3.png)
+![image](/images/alex-seastar-3.png)
 
 In addition to the RPC, smf has its own Write Ahead Log (WAL).
 
 It is a write-ahead log modeled after an Apache Kafka-like interface or Apache Pulsar. It has topics, partitions, etc. It is designed to have a single reader/writer per topic/partition.
 
 Current benchmarks in milliseconds ==> 41X faster than Apache Kafka
-![image](/seastar/images/alex-seastar-4.png)
+![image](/images/alex-seastar-4.png)
 
 These massive gains should be expected of many server-side applications.
 
@@ -95,25 +95,25 @@ Want to learn more about Seastar and smf? Please check out my [talk](https://www
 ### References 
 
 [^1]: [concord](http://concord.io/) – my previous startup.
-[^2]: [future header file](https://github.com/scylladb/seastar/blob/master/core/future.hh).
+[^2]: [future header file](https://github.com/scylladb/blob/master/core/future.hh).
 [^3]: [csp – t hoare](http://weblab.cs.uml.edu/~bill/cs515/CSP_Hoare_78.pdf).
 [^4]: [herb sutter](https://www.cs.utexas.edu/~lin/cs380p/Free_Lunch.pdf) – free lunch is over.
 [^5]: [akka](http://akka.io/) – actor framework for the jvm.
 [^6]: [orleans](https://github.com/dotnet/orleans) – actor framework by Microsoft.
 [^7]: [pony](https://www.ponylang.org/) – actor language.
 [^8]: [erlang](https://www.erlang.org/) – distributed programming lang.
-[^9]: [continuations docs](https://github.com/scylladb/seastar/blob/master/doc/tutorial.md#continuations).
+[^9]: [continuations docs](https://github.com/scylladb/blob/master/doc/tutorial.md#continuations).
 [^10]: [parallelism  is a free variable](https://www.youtube.com/watch?v=cN_DpYBzKso).
-[^11]: [seastar shared nothing](/seastar/shared-nothing/).
-[^12]: [seastar networking](/seastar/networking/).
-[^13]: [seastar promises](/seastar/futures-promises/).
-[^14]: [seastar message passing](/seastar/message-passing/).
+[^11]: [seastar shared nothing](/shared-nothing/).
+[^12]: [seastar networking](/networking/).
+[^13]: [seastar promises](/futures-promises/).
+[^14]: [seastar message passing](/message-passing/).
 [^15]: [facebook’s folly::futures](https://github.com/facebook/folly).
 [^16]: [facebook wangle](https://github.com/facebook/wangle).
-[^17]: [on-thread-safe shared ptr](https://github.com/scylladb/seastar/blob/master/core/shared_ptr.hh).
-[^18]: [seastar::sstring](https://github.com/scylladb/seastar/blob/40a68fa50ebeeb17cd3797af7cddbbcdf07ce61a/core/sstring.hh) – string with small type optimization.
+[^17]: [on-thread-safe shared ptr](https://github.com/scylladb/blob/master/core/shared_ptr.hh).
+[^18]: [seastar::sstring](https://github.com/scylladb/blob/40a68fa50ebeeb17cd3797af7cddbbcdf07ce61a/core/sstring.hh) – string with small type optimization.
 [^19]: [std::basic_string](https://gcc.gnu.org/onlinedocs/gcc-6.2.0/libstdc++/api/a01076_source.html).
-[^20]: [seastar::temporary_buffer](https://github.com/scylladb/seastar/blob/743723fc79d8f40a926908181026a709a8cbe719/core/temporary_buffer.hh).
+[^20]: [seastar::temporary_buffer](https://github.com/scylladb/blob/743723fc79d8f40a926908181026a709a8cbe719/core/temporary_buffer.hh).
 [^21]: [smf](https://github.com/senior7515/smf) – the fastest RPC in the west.
 
 
