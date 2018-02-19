@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Seastar</title>
-    <link>/seastar/blog/</link>
+    <link>/seastar-website/blog/</link>
     <description>Recent content in Blogs on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Feb 2018 08:02:27 -0800</lastBuildDate>
     
-	<atom:link href="/seastar/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/seastar-website/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Seastar: The future&lt;&gt; is Here</title>
-      <link>/seastar/blog/2018/02/seastar-the-future-is-here/</link>
+      <link>/seastar-website/blog/2018/02/seastar-the-future-is-here/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/seastar/blog/2018/02/seastar-the-future-is-here/</guid>
+      <guid>/seastar-website/blog/2018/02/seastar-the-future-is-here/</guid>
       <description>By Alexander Gallego
 This is a cross-post from Alexander&amp;rsquo;s Blog.
 On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search for a quick open desk to do some work, I volunteered open spaces we had at Concord1. We talked lock-free algorithms, memory reclamation techniques, threading models, Concord and distributed streaming engines, even C vs C++. Five hours later I was convinced that Seastar was the best systems framework I’d ever come across.</description>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seastar</title>
-    <link>/seastar/</link>
+    <link>/seastar-website/</link>
     <description>Recent content on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 13 Feb 2018 08:02:27 -0800</lastBuildDate>
     
-	<atom:link href="/seastar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/seastar-website/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Seastar: The future&lt;&gt; is Here</title>
-      <link>/seastar/blog/2018/02/seastar-the-future-is-here/</link>
+      <link>/seastar-website/blog/2018/02/seastar-the-future-is-here/</link>
       <pubDate>Tue, 13 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>/seastar/blog/2018/02/seastar-the-future-is-here/</guid>
+      <guid>/seastar-website/blog/2018/02/seastar-the-future-is-here/</guid>
       <description>By Alexander Gallego
 This is a cross-post from Alexander&amp;rsquo;s Blog.
 On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search for a quick open desk to do some work, I volunteered open spaces we had at Concord1. We talked lock-free algorithms, memory reclamation techniques, threading models, Concord and distributed streaming engines, even C vs C++. Five hours later I was convinced that Seastar was the best systems framework I’d ever come across.</description>
@@ -24,10 +24,10 @@ On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search f
     
     <item>
       <title>Frequently Asked Questions</title>
-      <link>/seastar/faq/</link>
+      <link>/seastar-website/faq/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/faq/</guid>
+      <guid>/seastar-website/faq/</guid>
       <description>What’s the Difference Between the Seastar Model and the Reactive Programming Model? Seastar futures/promises/continuations (f-p-c) are a subset of reactive programming.
 Seastar performance derives from the sharded, cooperative, non-blocking, micro-task scheduled design, and f-p-c are a friendlier way of feeding tasks to the scheduler.
 Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. They trade off thread safety, which is unneeded due to the sharded design, for scheduling efficiency, and have a very low memory footprint.</description>
@@ -35,19 +35,19 @@ Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. Th
     
     <item>
       <title>Futures and Promises</title>
-      <link>/seastar/futures-promises/</link>
+      <link>/seastar-website/futures-promises/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/futures-promises/</guid>
+      <guid>/seastar-website/futures-promises/</guid>
       <description>Paradigms for parallellization Solutions for coordinating work across multiple cores are many. Some are highly programmer-friendly and enable development of software that works exactly if it were running on a single core. For example the classic Unix process model is designed to keep each process in total isolation and relies on kernel code to maintain a separate virtual memory space per process. Unfortunately this increases the overhead at the OS level.</description>
     </item>
     
     <item>
       <title>HTTP performance</title>
-      <link>/seastar/http-performance/</link>
+      <link>/seastar-website/http-performance/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/http-performance/</guid>
+      <guid>/seastar-website/http-performance/</guid>
       <description>Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.
 This benchmark uses two identical Intel® Server System R2000WT servers.
  2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core (28 cores per host, with hyperthreading to 56 cores per host)
@@ -57,10 +57,10 @@ This benchmark uses two identical Intel® Server System R2000WT servers.
     
     <item>
       <title>Home</title>
-      <link>/seastar/home/</link>
+      <link>/seastar-website/home/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/home/</guid>
+      <guid>/seastar-website/home/</guid>
       <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
 Seastar is the first framework to bring together a set of extreme architectural innovations, including:
  Shared-nothing design: Seastar uses a shared-nothing model that shards all requests onto individual cores. High-performance networking: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</description>
@@ -68,10 +68,10 @@ Seastar is the first framework to bring together a set of extreme architectural 
     
     <item>
       <title>Message Passing</title>
-      <link>/seastar/message-passing/</link>
+      <link>/seastar-website/message-passing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/message-passing/</guid>
+      <guid>/seastar-website/message-passing/</guid>
       <description>Threaded applications require inherently expensive locking operations, while the Seastar model can completely avoid locks for cross-CPU communications.
 From the programmer’s point of view, Seastar uses futures, promises, and continuations (f/p/c). Where conventional event-driven programming using epoll and userspace libraries such as libevent has made it very difficult to write complex applications, f/p/c makes it easier to write complex asynchronous code.
 For example, the following interaction between a sender core, C0, and a receiver core, C1, can take place with no locking required.</description>
@@ -79,30 +79,30 @@ For example, the following interaction between a sender core, C0, and a receiver
     
     <item>
       <title>Networking</title>
-      <link>/seastar/networking/</link>
+      <link>/seastar-website/networking/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/networking/</guid>
+      <guid>/seastar-website/networking/</guid>
       <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
  DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
     </item>
     
     <item>
       <title>Seastar Applications</title>
-      <link>/seastar/seastar-applications/</link>
+      <link>/seastar-website/seastar-applications/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/seastar-applications/</guid>
+      <guid>/seastar-website/seastar-applications/</guid>
       <description>While many applications can benefit from high performance, Seastar is currently focused on high-throughput, low-latency I/O intensive applications.
  Pedis: Redis-compatible data structure store Scylla: NoSQL column-store database, compatible with Apache Cassandra at 10x the throughput Seastar HTTPD: web server Seastar Memcached: a fast server for the Memcache key-value store  </description>
     </item>
     
     <item>
       <title>Shared-nothing Design</title>
-      <link>/seastar/shared-nothing/</link>
+      <link>/seastar-website/shared-nothing/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
-      <guid>/seastar/shared-nothing/</guid>
+      <guid>/seastar-website/shared-nothing/</guid>
       <description>Hardware on which modern workloads must run is remarkably different from the hardware on which current programming paradigms depend, and for which current software infrastructure is designed.
 Core Counts Grow, Clock Speeds Stay Constant Performance increases in clock speeds of individual cores have stopped. The increase in number of cores means that performance depends on coordination across multiple cores, no longer on throughput of a single core.
 On new hardware, the performance of standard workloads depends more on locking and coordination across cores than on performance of an individual core.</description>

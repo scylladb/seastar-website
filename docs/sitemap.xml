@@ -3,64 +3,64 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/seastar/blog/2018/02/seastar-the-future-is-here/</loc>
+    <loc>/seastar-website/blog/2018/02/seastar-the-future-is-here/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/faq/</loc>
+    <loc>/seastar-website/faq/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/futures-promises/</loc>
+    <loc>/seastar-website/futures-promises/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/http-performance/</loc>
+    <loc>/seastar-website/http-performance/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/home/</loc>
+    <loc>/seastar-website/home/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/message-passing/</loc>
+    <loc>/seastar-website/message-passing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/networking/</loc>
+    <loc>/seastar-website/networking/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/seastar-applications/</loc>
+    <loc>/seastar-website/seastar-applications/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/shared-nothing/</loc>
+    <loc>/seastar-website/shared-nothing/</loc>
     <lastmod>2017-02-05T07:51:49+01:00</lastmod>
   </url>
   
   <url>
-    <loc>/seastar/blog/</loc>
-    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/seastar/</loc>
+    <loc>/seastar-website/blog/</loc>
     <lastmod>2018-02-13T08:02:27-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>/seastar/tags/</loc>
+    <loc>/seastar-website/</loc>
+    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/seastar-website/tags/</loc>
     <priority>0</priority>
   </url>
   

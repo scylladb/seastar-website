@@ -3,7 +3,7 @@ title = "Seastar"
 theme = "crab"
 publishDir = "docs"
 #baseurl = "https://rusher81572.github.io/seastar/"
-baseurl = "/seastar/"
+baseurl = "/seastar-website/"
 #baseurl = "/"
 
 [params]
