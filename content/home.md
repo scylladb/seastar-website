@@ -25,8 +25,8 @@ Source code is available from the [Seastar repository on GitHub](https://github.
 Follow [@ScyllaDB](https://twitter.com/ScyllaDB) on Twitter for more info.
 
 # Performance
-![image](/images/httpd-throughput.png)
-![image](/images/memcache.png)
+![image](/images/seastar-httpd-throughput.png)
+![image](/images/seastar-memcache.png)
 
 In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.
 
