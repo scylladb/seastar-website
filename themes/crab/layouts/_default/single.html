@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{ if hasPrefix .URL "/seastar-website/blog/" }}
+{{ if hasPrefix .URL "/blog/" }}
 <p class="timestamp">{{ .Date.Format "January 2, 2006" }}</p>
 {{ end }}
 {{ .Content }}
