@@ -93,7 +93,7 @@
 
 
 
-<p><img src="/seastar/images/alex-seastar-5.jpg" alt="image" />
+<p><img src="/images/alex-seastar-5.jpg" alt="image" />
 By Alexander Gallego</p>
 
 <p>This is a cross-post from <a href="https://www.alexgallego.org/concurrency/smf/2017/12/17/future.html">Alexander&rsquo;s Blog</a>.</p>
@@ -112,7 +112,7 @@ By Alexander Gallego</p>
 
 <p><code>seastar::future&lt;&gt;</code>’s are for concurrent software construction. In addition, their design makes them composable. You can take any two futures and chain them together via <code>.then()</code> operator and yield a new future<sup class="footnote-ref" id="fnref:9"><a rel="footnote" href="#fn:9">9</a></sup>. Although you can combine, mix, map-reduce, filter, chain, fail, complete, generate, fulfill, sleep, expire futures, etc, they are fundamentally about program structure. Such program structure can execute in parallel, but doesn’t have to. When you have concurrent structure, parallelism is a free variable<sup class="footnote-ref" id="fnref:10"><a rel="footnote" href="#fn:10">10</a></sup>. That is to say, you can turn up or down the number of <code>simultaneous</code> execution units/cores/threads without changing your program. In this paradigm, you worry about correct program structure and someone else worries about the execution.</p>
 
-<p><img src="/seastar/images/alex-seastar-1.png" alt="image" /></p>
+<p><img src="/images/alex-seastar-1.png" alt="image" /></p>
 
 <p>Seastar is an intrusive building block. Once you start composing Seastar-driven asynchronous building blocks, you have to go out of your way – really – to build anything synchronous, and that’s powerful. Structurally, Seastar has the same effect as actor frameworks like Akka5, Orleans<sup class="footnote-ref" id="fnref:6"><a rel="footnote" href="#fn:6">6</a></sup>, or even languages like Pony<sup class="footnote-ref" id="fnref:7"><a rel="footnote" href="#fn:7">7</a></sup> or Erlang<sup class="footnote-ref" id="fnref:8"><a rel="footnote" href="#fn:8">8</a></sup> have. Once you have an actor, they spread <strong>virally</strong> through your system making everything an actor.</p>
 
@@ -156,7 +156,7 @@ By Alexander Gallego</p>
 
 <h3 id="a-mental-model">A Mental Model</h3>
 
-<p><img src="/seastar/images/alex-seastar-2.png" alt="image" /></p>
+<p><img src="/images/alex-seastar-2.png" alt="image" /></p>
 
 <p><em>Figure 1: Seastar Mental Model. Everything in Seastar happens in a `thread_local’ (per hyper-thread) with the exception of explicit cross-core communication. As with all mental models, this is a simplification and omits details.</em></p>
 
@@ -175,14 +175,14 @@ C/C++ Header                     77            650            824           2761
 
 <p>Current benchmarks in microseconds make smf’s RPC (Seastar-backed through DPDK) the lowest tail latency system I’ve tested – including gRPC, Thrift, Cap n’Proto, etc. What matters, however, is not that I’ve managed to build a fast RPC, but the fact that doing it with Seastar was no more work than doing the same thing with facebook::folly and facebook::wangle, boost::asio, or libevent.</p>
 
-<p><img src="/seastar/images/alex-seastar-3.png" alt="image" /></p>
+<p><img src="/images/alex-seastar-3.png" alt="image" /></p>
 
 <p>In addition to the RPC, smf has its own Write Ahead Log (WAL).</p>
 
 <p>It is a write-ahead log modeled after an Apache Kafka-like interface or Apache Pulsar. It has topics, partitions, etc. It is designed to have a single reader/writer per topic/partition.</p>
 
 <p>Current benchmarks in milliseconds ==&gt; 41X faster than Apache Kafka
-<img src="/seastar/images/alex-seastar-4.png" alt="image" /></p>
+<img src="/images/alex-seastar-4.png" alt="image" /></p>
 
 <p>These massive gains should be expected of many server-side applications.</p>
 
@@ -196,7 +196,7 @@ C/C++ Header                     77            650            824           2761
 <ol>
 <li id="fn:1"><a href="http://concord.io/">concord</a> – my previous startup.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2"><a href="https://github.com/scylladb/seastar/blob/master/core/future.hh">future header file</a>.
+<li id="fn:2"><a href="https://github.com/scylladb/blob/master/core/future.hh">future header file</a>.
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 <li id="fn:3"><a href="http://weblab.cs.uml.edu/~bill/cs515/CSP_Hoare_78.pdf">csp – t hoare</a>.
  <a class="footnote-return" href="#fnref:3"><sup>[return]</sup></a></li>
@@ -210,29 +210,29 @@ C/C++ Header                     77            650            824           2761
  <a class="footnote-return" href="#fnref:7"><sup>[return]</sup></a></li>
 <li id="fn:8"><a href="https://www.erlang.org/">erlang</a> – distributed programming lang.
  <a class="footnote-return" href="#fnref:8"><sup>[return]</sup></a></li>
-<li id="fn:9"><a href="https://github.com/scylladb/seastar/blob/master/doc/tutorial.md#continuations">continuations docs</a>.
+<li id="fn:9"><a href="https://github.com/scylladb/blob/master/doc/tutorial.md#continuations">continuations docs</a>.
  <a class="footnote-return" href="#fnref:9"><sup>[return]</sup></a></li>
 <li id="fn:10"><a href="https://www.youtube.com/watch?v=cN_DpYBzKso">parallelism  is a free variable</a>.
  <a class="footnote-return" href="#fnref:10"><sup>[return]</sup></a></li>
-<li id="fn:11"><a href="/seastar/shared-nothing/">seastar shared nothing</a>.
+<li id="fn:11"><a href="/shared-nothing/">seastar shared nothing</a>.
  <a class="footnote-return" href="#fnref:11"><sup>[return]</sup></a></li>
-<li id="fn:12"><a href="/seastar/networking/">seastar networking</a>.
+<li id="fn:12"><a href="/networking/">seastar networking</a>.
  <a class="footnote-return" href="#fnref:12"><sup>[return]</sup></a></li>
-<li id="fn:13"><a href="/seastar/futures-promises/">seastar promises</a>.
+<li id="fn:13"><a href="/futures-promises/">seastar promises</a>.
  <a class="footnote-return" href="#fnref:13"><sup>[return]</sup></a></li>
-<li id="fn:14"><a href="/seastar/message-passing/">seastar message passing</a>.
+<li id="fn:14"><a href="/message-passing/">seastar message passing</a>.
  <a class="footnote-return" href="#fnref:14"><sup>[return]</sup></a></li>
 <li id="fn:15"><a href="https://github.com/facebook/folly">facebook’s folly::futures</a>.
  <a class="footnote-return" href="#fnref:15"><sup>[return]</sup></a></li>
 <li id="fn:16"><a href="https://github.com/facebook/wangle">facebook wangle</a>.
  <a class="footnote-return" href="#fnref:16"><sup>[return]</sup></a></li>
-<li id="fn:17"><a href="https://github.com/scylladb/seastar/blob/master/core/shared_ptr.hh">on-thread-safe shared ptr</a>.
+<li id="fn:17"><a href="https://github.com/scylladb/blob/master/core/shared_ptr.hh">on-thread-safe shared ptr</a>.
  <a class="footnote-return" href="#fnref:17"><sup>[return]</sup></a></li>
-<li id="fn:18"><a href="https://github.com/scylladb/seastar/blob/40a68fa50ebeeb17cd3797af7cddbbcdf07ce61a/core/sstring.hh">seastar::sstring</a> – string with small type optimization.
+<li id="fn:18"><a href="https://github.com/scylladb/blob/40a68fa50ebeeb17cd3797af7cddbbcdf07ce61a/core/sstring.hh">seastar::sstring</a> – string with small type optimization.
  <a class="footnote-return" href="#fnref:18"><sup>[return]</sup></a></li>
 <li id="fn:19"><a href="https://gcc.gnu.org/onlinedocs/gcc-6.2.0/libstdc++/api/a01076_source.html">std::basic_string</a>.
  <a class="footnote-return" href="#fnref:19"><sup>[return]</sup></a></li>
-<li id="fn:20"><a href="https://github.com/scylladb/seastar/blob/743723fc79d8f40a926908181026a709a8cbe719/core/temporary_buffer.hh">seastar::temporary_buffer</a>.
+<li id="fn:20"><a href="https://github.com/scylladb/blob/743723fc79d8f40a926908181026a709a8cbe719/core/temporary_buffer.hh">seastar::temporary_buffer</a>.
  <a class="footnote-return" href="#fnref:20"><sup>[return]</sup></a></li>
 <li id="fn:21"><a href="https://github.com/senior7515/smf">smf</a> – the fastest RPC in the west.
  <a class="footnote-return" href="#fnref:21"><sup>[return]</sup></a></li>
