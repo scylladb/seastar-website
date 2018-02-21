@@ -10,12 +10,14 @@ Interested in contributing code to a framework that provides ScyllaDB and other 
 Learn more about Seastar at [http://www.seastar-project.org/](http://www.seastar-project.org/)
 
 Students willing to participe should check for eligibility and more details at the following links:
+
 [https://summerofcode.withgoogle.com/get-started/](https://summerofcode.withgoogle.com/get-started/)
+
 [https://summerofcode.withgoogle.com/organizations/6190282903650304/](https://summerofcode.withgoogle.com/organizations/6190282903650304/)
 
 Student Application period opens on March 12th and ends at March 27th, so add the date to your calendar and don’t forget to check it out in time.
 
-If you’re eligible for the summer of code program, then you may start looking at our ideas list at https://github.com/scylladb/seastar/wiki/Google-Summer-of-Code-2018#ideas
+If you’re eligible for the summer of code program, then you may start looking at our ideas list at [https://github.com/scylladb/seastar/wiki/Google-Summer-of-Code-2018#ideas](https://github.com/scylladb/seastar/wiki/Google-Summer-of-Code-2018#ideas)
 
 If you're interested in knowing more about Seastar, gather details about other potential ideas, or make a proposal based on the ideas in the link above, please send an e-mail to Seastar developer’s mailing List at seastar-dev@googlegroups.com. We’ll be very happy to guide you through the process.
 
