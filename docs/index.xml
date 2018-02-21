@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Seastar Framework Accepted for Google Summer of Code</title>
-      <link>http://seastar.io/blog/2018/02/seastar-framework-accepted-for-google-summer-of-code/</link>
+      <title>The Seastar Framework Was Accepted for Google Summer of Code</title>
+      <link>http://seastar.io/blog/2018/02/the-seastar-framework-was-accepted-for-google-summer-of-code/</link>
       <pubDate>Wed, 21 Feb 2018 08:02:27 -0800</pubDate>
       
-      <guid>http://seastar.io/blog/2018/02/seastar-framework-accepted-for-google-summer-of-code/</guid>
+      <guid>http://seastar.io/blog/2018/02/the-seastar-framework-was-accepted-for-google-summer-of-code/</guid>
       <description>By: Raphael Carvalho.
 Interested in contributing code to a framework that provides Scylla and other programs with high-throughput I/O and networking? The Scylla team is pleased to announce that the Seastar framework has been accepted as a Google Summer of Code organization. Google Summer of Code with the Seastar project provides students with the opportunity to spend their summer break contributing to an awesome open source project, work under the mentorship of dedicated, brilliant engineers, and in addition receiving a stipend when the project milestones are met.</description>
     </item>
