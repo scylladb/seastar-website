@@ -1,5 +1,5 @@
 ---
-title: "Seastar: The future<> is Here"
+title: "Seastar Framework Accepted for Google Summer of Code"
 date: 2018-02-21T08:02:27-08:00
 ---
 # Seastar Framework Accepted for Google Summer of Code
