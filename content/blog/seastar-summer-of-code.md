@@ -1,5 +1,5 @@
 ---
-title: "Seastar Framework Accepted for Google Summer of Code"
+title: "The Seastar Framework Was Accepted for Google Summer of Code"
 date: 2018-02-21T08:02:27-08:00
 ---
 By: Raphael Carvalho.
