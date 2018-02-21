@@ -4,7 +4,7 @@ date: 2018-02-21T08:02:27-08:00
 ---
 By: Raphael Carvalho.
 
-Interested in contributing code to a framework that provides Scylla and other programs with high-throughput I/O and networking? The Scylla team is pleased to announce that Seastar framework has been accepted as a Google Summer of Code organization. Google summer of code with the Seastar project provides students with the opportunity to spend their summer break contributing to an awesome open source project, work under the mentorship of dedicated, brilliant engineers, and in addition receiving a stipend when the project milestones are met.
+Interested in contributing code to a framework that provides Scylla and other programs with high-throughput I/O and networking? The Scylla team is pleased to announce that the Seastar framework has been accepted as a Google Summer of Code organization. Google Summer of Code with the Seastar project provides students with the opportunity to spend their summer break contributing to an awesome open source project, work under the mentorship of dedicated, brilliant engineers, and in addition receiving a stipend when the project milestones are met.
 
 Learn more about Seastar at [http://www.seastar-project.org/](http://www.seastar-project.org/)
 
@@ -18,7 +18,7 @@ Student Application period opens on March 12th and ends on March 27th, so add th
 
 If you’re eligible for the summer of code program, then you may start looking at our ideas list at [https://github.com/scylladb/seastar/wiki/Google-Summer-of-Code-2018#ideas](https://github.com/scylladb/seastar/wiki/Google-Summer-of-Code-2018#ideas)
 
-If you're interested in knowing more about Seastar, gather details about other potential ideas, or make a proposal based on the ideas in the link above, please send an e-mail to Seastar Developer’s Mailing List at [seastar-dev@googlegroups.com](seastar-dev@googlegroups.com). We’ll be very happy to guide you through the process.
+If you're interested in knowing more about Seastar, gather details about other potential ideas, or make a proposal based on the ideas in the link above, please send an e-mail to the Seastar Developer’s Mailing List at [seastar-dev@googlegroups.com](seastar-dev@googlegroups.com). We’ll be very happy to guide you through the process.
 
 Stay tuned!
 
