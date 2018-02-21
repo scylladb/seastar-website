@@ -4,7 +4,7 @@ date: 2018-02-21T08:02:27-08:00
 ---
 By: Raphael Carvalho.
 
-Interested in contributing code to a framework that provides ScyllaDB and other programs with high-throughput I/O and networking? The Scylla team is pleased to announce that Seastar framework has been accepted as a Google Summer of Code organization. Google summer of code with the Seastar project provides students with the opportunity to spend their summer break contributing to an awesome open source project, work under the mentorship of dedicated, brilliant engineers, and in addition receiving a stipend when the project milestones are met.
+Interested in contributing code to a framework that provides Scylla and other programs with high-throughput I/O and networking? The Scylla team is pleased to announce that Seastar framework has been accepted as a Google Summer of Code organization. Google summer of code with the Seastar project provides students with the opportunity to spend their summer break contributing to an awesome open source project, work under the mentorship of dedicated, brilliant engineers, and in addition receiving a stipend when the project milestones are met.
 
 Learn more about Seastar at [http://www.seastar-project.org/](http://www.seastar-project.org/)
 
