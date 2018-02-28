@@ -28,8 +28,9 @@ a:hover {
 }
 
 #site-title {
-  font-weight: 700;
+  font-weight: 200;
   font-size: xx-large;
+  font-family: 'Monda', sans-serif;
 }
 
 #site-title a:link,
