@@ -1,148 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Futures and Promises - Seastar</title>
-    <link rel="stylesheet" href="http://seastar.io/css/crab.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-    <meta name="generator" content="Hugo 0.36" />
-
-
-
-    
-
-  </head>
-  <body>
-
-    <div id="container">
-
-      <div id="header">
-
-        <div id="site-logo">
-          
-            <img src="http://seastar.io//images/logo.png" width="300" height="50">
-          
-        </div>
-
-	<div id="site-title"><a href="http://seastar.io/">Seastar</a></div>
-	<div id="site-slogan">The Official Website for the Seastar Project</div>
-
-      </div>
-
-            <nav>
-	<ul class="first">
-          
-            <li><a href="/">Home</a>
-	    
-	    </li>
-	  
-            <li><a href="/">Architecture &raquo;</a>
-	    
-	      <ul class="second">
-	      
-                <li><a href="/futures-promises">Futures and Promises</a>
-		  
-		</li>
-	      
-                <li><a href="/message-passing">Message Passing</a>
-		  
-		</li>
-	      
-                <li><a href="/networking">Networking</a>
-		  
-		</li>
-	      
-                <li><a href="/shared-nothing">Shared-Nothing</a>
-		  
-		</li>
-	      
-	      </ul>
-	    
-	    </li>
-	  
-            <li><a href="/blog/">Blog</a>
-	    
-	    </li>
-	  
-            <li><a href="/seastar-applications">Seastar Applications</a>
-	    
-	    </li>
-	  
-            <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a>
-	    
-	    </li>
-	  
-            <li><a href="/faq">Frequently Asked Questions</a>
-	    
-	    </li>
-	  
-            <li><a href="https://www.scylladb.com/">ScyllaDB</a>
-	    
-	    </li>
-	  
-	</ul>
-      </nav>
-
-
-      <div id="content">
-
-        <div id="article">
-	  <h1>Futures and Promises</h1>
-
-
-
-
-<h1 id="paradigms-for-parallellization">Paradigms for parallellization</h1>
-
-<p>Solutions for coordinating work across multiple cores are many. Some are highly programmer-friendly and enable development of software that works exactly if it were running on a single core. For example the classic Unix process model is designed to keep each process in total isolation and relies on kernel code to maintain a separate virtual memory space per process. Unfortunately this increases the overhead at the OS level.</p>
-
-<h1 id="software-development-challenges">Software development challenges</h1>
-
-<p><code>&quot;Programs must be written for people to read, and only incidentally for machines to execute.&quot;</code>
-— Harold Abelson and Gerald Jay Sussman</p>
-
-<p>Hardware has changed to the point where the assumptions originally made on small numbers of CPU cores are no longer valid.</p>
-
-<ul>
-<li><p>Processes are extremely self-contained but have high overhead.</p></li>
-
-<li><p>Threads impose additional coordination costs on both the programmer and the application infrastructure, and are notoriously difficult to debug.</p></li>
-
-<li><p>Pure event-driven programming can result in codebases that are difficult to test and extend.</p></li>
-</ul>
-
-<p>An ideal solution would have:</p>
-
-<ul>
-<li><p>Straightforward design to be comprehensible for program design and development</p></li>
-
-<li><p>Minimum overhead on modern hardware</p></li>
-
-<li><p>Low debugging costs</p></li>
-</ul>
-
-<h1 id="solution-seastar-futures-and-promises">Solution: Seastar futures and promises</h1>
-
-<p>The solution is a model known as “futures and promises”.</p>
-
-<p>A future is a data structure that represents some yet-undetermined result. A promise is the provider of this result.</p>
-
-<p>It is sometimes helpful to think of a promise/future pair as a first-in first-out queue with a maximum length of one item, which may be used only once. The promise is the producing end of the queue, while the future is the consuming end. Like FIFOs, futures and promises are used to decouple the data producer and the data consumer.</p>
-
-<p>Basic futures and promises are implemented in the C++ standard library, and in Boost.</p>
-
-<p>However, the optimized Seastar implementations of futures and promises are different. While the standard implementation targets coarse-grained tasks that may block and take a long time to complete, Seastar futures and promises are used to manage fine-grained, non-blocking tasks. In order to meet this requirement efficiently:</p>
-
-<ul>
-<li>Seastar futures and promises require no locking.</li>
-<li>Seastar futures and promises do not allocate memory.</li>
-<li>Seastar futures support continuations.</li>
-</ul>
-
-<h1 id="example">Example</h1>
-
-<p>A simple example of a future/promise pair is:</p>
-
-<pre><code>#include &quot;seastar/core/reactor.hh&quot;
+<head>
+<title>Futures and Promises - Seastar</title>
+<link rel="stylesheet" href="http://seastar.io/css/crab.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+<meta name="description" content="Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.">
+<meta name="generator" content="Hugo 0.36" />
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <div id="site-title"><a href="http://seastar.io/"><img src="http://seastar.io/images/seastar-logo-white.svg" alt="Seastar Logo"></a></div>
+    <nav>
+      <ul class="first">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/">Architecture &raquo;</a>
+          <ul class="second">
+            <li><a href="/futures-promises">Futures and Promises</a> </li>
+            <li><a href="/message-passing">Message Passing</a> </li>
+            <li><a href="/networking">Networking</a> </li>
+            <li><a href="/shared-nothing">Shared-Nothing</a> </li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a> </li>
+        <li><a href="/seastar-applications">Seastar Applications</a> </li>
+        <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a> </li>
+        <li><a href="/faq">Frequently Asked Questions</a> </li>
+        <li><a href="https://www.scylladb.com/">ScyllaDB</a> </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div id="content">
+    <div id="article">
+      <h1>Futures and Promises</h1>
+      <h2 id="paradigms-for-parallellization">Paradigms for parallellization</h2>
+      <p>Solutions for coordinating work across multiple cores are many. Some are highly programmer-friendly and enable development of software that works exactly if it were running on a single core. For example the classic Unix process model is designed to keep each process in total isolation and relies on kernel code to maintain a separate virtual memory space per process. Unfortunately this increases the overhead at the OS level.</p>
+      <h2 id="software-development-challenges">Software development challenges</h2>
+      <p><code>&quot;Programs must be written for people to read, and only incidentally for machines to execute.&quot;</code> — Harold Abelson and Gerald Jay Sussman</p>
+      <p>Hardware has changed to the point where the assumptions originally made on small numbers of CPU cores are no longer valid.</p>
+      <ul>
+        <li>
+          <p>Processes are extremely self-contained but have high overhead.</p>
+        </li>
+        <li>
+          <p>Threads impose additional coordination costs on both the programmer and the application infrastructure, and are notoriously difficult to debug.</p>
+        </li>
+        <li>
+          <p>Pure event-driven programming can result in codebases that are difficult to test and extend.</p>
+        </li>
+      </ul>
+      <p>An ideal solution would have:</p>
+      <ul>
+        <li>
+          <p>Straightforward design to be comprehensible for program design and development</p>
+        </li>
+        <li>
+          <p>Minimum overhead on modern hardware</p>
+        </li>
+        <li>
+          <p>Low debugging costs</p>
+        </li>
+      </ul>
+      <h2 id="solution-seastar-futures-and-promises">Solution: Seastar futures and promises</h2>
+      <p>The solution is a model known as “futures and promises”.</p>
+      <p>A future is a data structure that represents some yet-undetermined result. A promise is the provider of this result.</p>
+      <p>It is sometimes helpful to think of a promise/future pair as a first-in first-out queue with a maximum length of one item, which may be used only once. The promise is the producing end of the queue, while the future is the consuming end. Like FIFOs, futures and promises are used to decouple the data producer and the data consumer.</p>
+      <p>Basic futures and promises are implemented in the C++ standard library, and in Boost.</p>
+      <p>However, the optimized Seastar implementations of futures and promises are different. While the standard implementation targets coarse-grained tasks that may block and take a long time to complete, Seastar futures and promises are used to manage fine-grained, non-blocking tasks. In order to meet this requirement efficiently:</p>
+      <ul>
+        <li>Seastar futures and promises require no locking.</li>
+        <li>Seastar futures and promises do not allocate memory.</li>
+        <li>Seastar futures support continuations.</li>
+      </ul>
+      <h2 id="example">Example</h2>
+      <p>A simple example of a future/promise pair is:</p>
+      <pre><code>#include &quot;seastar/core/reactor.hh&quot;
 #include &quot;seastar/core/sstring.hh&quot;
 #include &quot;seastar/core/app-template.hh&quot;
 future&lt;sstring&gt;
@@ -160,33 +94,21 @@ int main(int ac, char** av) {
     });
 }
 </code></pre>
-
-<p>More examples are available in the Seastar online documentation on futures and promises.</p>
-
-
+      <p>More examples are available in the Seastar online documentation on futures and promises.</p>
+    </div>
+  </div>
 </div>
-
-</div>
-
 <div id="footer">
-  <table style="width:50%">
-    <tr>
-      <th>Copyright 2018 ScyllaDB</th>
-      <th><a style='text-decoration:none' href='https://twitter.com/ScyllaDB'><img src='/images/twitter.png' width=20 height=20><br>Twitter</a></th>
-      <th>&nbsp&nbsp&nbsp&nbsp</th>
-      <th><a style='text-decoration:none' href='https://github.com/scylladb/seastar'><img src='/images/github.png' width=20 height=20><br>GitHub</a></th>
-    </tr>
-    <tr>
-      <td><b><p align=center><a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a></td>
- </tr>
- <tr>
-<td><b><p align=center><a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></td>
-</tr>
-  </table>
+  <div class="container">
+    <div class="section mascot-img"><img src="http://seastar.io/images/seastar-mascot-2.png"></div>
+    <div class="footer-flex">
+      <div class="section-footer">Copyright 2018 ScyllaDB | <a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a> | <a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></div>
+      <div class="section-footer">
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href='https://twitter.com/ScyllaDB'><img src="http://seastar.io/images/icon-twitter.png" style="margin:0 5px; vertical-align:middle;"><span style="line-height:35px;">Twitter</span></a></div>
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href="https://github.com/scylladb/seastar"><img src="http://seastar.io/images/icon-github.png" style="margin:0 5px;vertical-align:middle;"><span style="line-height:35px;">GitHub</span></a></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-</div>
-
 </body>
-
 </html>
