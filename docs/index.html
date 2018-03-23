@@ -1,143 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Seastar - Seastar</title>
-    <link rel="stylesheet" href="http://seastar.io/css/crab.css">
-    <link href="https://fonts.googleapis.com/css?family=Monda|Roboto" rel="stylesheet"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-    <meta name="generator" content="Hugo 0.36" />
-
-
-
-    
-
-  </head>
-  <body>
-
-    <div id="container">
-
-      <div id="header">
-
-	<div id="site-title"><a href="http://seastar.io/">Seastar</a></div>
-	<div id="site-slogan">The Official Website for the Seastar Project</div>
-
-      </div>
-
-            <nav>
-	<ul class="first">
-          
-            <li><a href="/">Home</a>
-	    
-	    </li>
-	  
-            <li><a href="/">Architecture &raquo;</a>
-	    
-	      <ul class="second">
-	      
-                <li><a href="/futures-promises">Futures and Promises</a>
-		  
-		</li>
-	      
-                <li><a href="/message-passing">Message Passing</a>
-		  
-		</li>
-	      
-                <li><a href="/networking">Networking</a>
-		  
-		</li>
-	      
-                <li><a href="/shared-nothing">Shared-Nothing</a>
-		  
-		</li>
-	      
-	      </ul>
-	    
-	    </li>
-	  
-            <li><a href="/blog/">Blog</a>
-	    
-	    </li>
-	  
-            <li><a href="/seastar-applications">Seastar Applications</a>
-	    
-	    </li>
-	  
-            <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a>
-	    
-	    </li>
-	  
-            <li><a href="/faq">Frequently Asked Questions</a>
-	    
-	    </li>
-	  
-            <li><a href="https://www.scylladb.com/">ScyllaDB</a>
-	    
-	    </li>
-	  
-	</ul>
-      </nav>
-
-
-      <div id="content">
-
-        <div id="article">
-	  <h1>Seastar</h1>
-
-  
-    
-
-<p>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in <a href="http://www.scylladb.com/">Scylla</a>, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on <a href="http://kernel.org/">Linux</a> or <a href="http://osv.io/">OSv</a>.</p>
-
-<p>Seastar is the first framework to bring together a set of extreme architectural innovations, including:</p>
-
-<ul>
-<li><a href="/shared-nothing">Shared-nothing design</a>: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
-<li><a href="/networking">High-performance networking</a>: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</li>
-<li><a href="/futures-promises">Futures and promises</a>: An advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.</li>
-<li><a href="/message-passing">Message passing</a>: A design for sharing information between CPU cores without time-consuming locking</li>
-</ul>
-
-<h1 id="getting-started-with-seastar">Getting Started with Seastar</h1>
-
-<p>Source code is available from the <a href="https://github.com/scylladb">Seastar repository on GitHub</a>.</p>
-
-<p><a href="http://docs.seastar-project.org/">Seastar documentation</a> is available on the web or within the source code.</p>
-
-<p><a href="https://groups.google.com/forum/?hl=en#!forum-dev">seastar-dev</a> is the project mailing list.</p>
-
-<p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
-
-<h1 id="performance">Performance</h1>
-
-<p><img src="/images/seastar-httpd-throughput.png" alt="image" />
-<img src="/images/seastar-memcache.png" alt="image" /></p>
-
-<p>In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.</p>
-
-<p><a href="/http-performance/">Details on HTTP performance</a> data are also available.</p>
-
-  
+<head>
+<title>Seastar - Seastar</title>
+<link rel="stylesheet" href="http://seastar.io/css/crab.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+<meta name="description" content="Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.">
+<meta name="generator" content="Hugo 0.36" />
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <div id="site-title"><a href="http://seastar.io/"><img src="http://seastar.io/images/seastar-logo-white.svg" alt="Seastar Logo"></a></div>
+    <nav>
+      <ul class="first">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/">Architecture &raquo;</a>
+          <ul class="second">
+            <li><a href="/futures-promises">Futures and Promises</a> </li>
+            <li><a href="/message-passing">Message Passing</a> </li>
+            <li><a href="/networking">Networking</a> </li>
+            <li><a href="/shared-nothing">Shared-Nothing</a> </li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a> </li>
+        <li><a href="/seastar-applications">Seastar Applications</a> </li>
+        <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a> </li>
+        <li><a href="/faq">Frequently Asked Questions</a> </li>
+        <li><a href="https://www.scylladb.com/">ScyllaDB</a> </li>
+      </ul>
+    </nav>
+  </div>
 </div>
-
-</div>
-
-<div id="footer">
+<div id="header-container">
+  <div id="header-intro">Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in <a href="http://www.scylladb.com/">Scylla</a>, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on <a href="http://kernel.org/">Linux</a> or <a href="http://osv.io/">OSv</a>.</div>
+  <a class="hero-cta" href="#">Get Started</a> </div>
 <div class="container">
- Copyright 2018 ScyllaDB |  <a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a> | <a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a>
- 
-  <div style="float:right; margin:0 30px;">
-     <a style="text-decoration:none;" href='https://twitter.com/ScyllaDB'><img src="/images/twitter.png" width=20 height=20 style="margin:0 5px; vertical-align:middle;"><span style="line-height:35px;">Twitter</span></a></div>
-   
-     <div style="float:right; margin:0 30px;">
-     <a style="text-decoration:none;" href="https://github.com/scylladb/seastar"><img src="/images/github.png" width=20 height=20 style="margin:0 5px;vertical-align:middle;"><span style="line-height:35px;">GitHub</span></a> </div>
-     
-
-
+  <hr class="dotted-line">
+  <div id="content">
+    <div class="features-panel">
+      <h1>Seastar is the first framework to bring together a set of extreme architectural innovations, including:</h1>
+      <ul class="features-left-col">
+        <li><a href="/shared-nothing">Shared-nothing design</a>: Seastar uses a shared-nothing model that shards all requests onto individual cores.</li>
+        <li><a href="/networking">High-performance networking</a>: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</li>
+      </ul>
+      <ul class="features-right-col">
+        <li><a href="/futures-promises">Futures and promises</a>: An advanced new model for concurrent applications that offers C++ programmers both high performance and the ability to create comprehensible, testable high-quality code.</li>
+        <li><a href="/message-passing">Message passing</a>: A design for sharing information between CPU cores without time-consuming locking</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="content-panel">
+  <div class="container">
+    <div class="floating-lines">
+      <hr class="dotted-line" style="margin-top:70px;">
+    </div>
+    <div class="floating-mascot"><img src="images/seastar-mascot-1.png" class="img-sizing"></div>
+    <div class="floating-lines">
+      <hr class="dotted-line" style="margin-top:70px;">
+    </div>
+    <h2 id="getting-started-with-seastar" style="clear:both;">Getting Started with Seastar</h2>
+    <p>Source code is available from the <a href="https://github.com/scylladb">Seastar repository on GitHub</a>.</p>
+    <p><a href="http://docs.seastar-project.org/">Seastar documentation</a> is available on the web or within the source code.</p>
+    <p><a href="https://groups.google.com/forum/?hl=en#!forum-dev">seastar-dev</a> is the project mailing list.</p>
+    <p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
+  </div>
+</div>
+<div class="container">
+  <div id="content">
+    <hr class="dotted-line">
+    <h2 id="performance">Performances</h2>
+    <p style="text-align:center;"><img src="images/seastar-httpd-throughput.png" alt="image" class="diagram-img"/> <img src="images/seastar-memcache.png" alt="image" class="diagram-img"/></p>
+    <div style="text-align:center;">
+      <p>In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.</p>
+      <p><a href="/http-performance/">Details on HTTP performance</a> data are also available.</p>
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <div class="container">
+    <div class="section mascot-img"><img src="http://seastar.io/images/seastar-mascot-2.png"></div>
+    <div class="footer-flex">
+      <div class="section-footer">Copyright 2018 ScyllaDB | <a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a> | <a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></div>
+      <div class="section-footer">
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href='https://twitter.com/ScyllaDB'><img src="http://seastar.io/images/icon-twitter.png" style="margin:0 5px; vertical-align:middle;"><span style="line-height:35px;">Twitter</span></a></div>
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href="https://github.com/scylladb/seastar"><img src="http://seastar.io/images/icon-github.png" style="margin:0 5px;vertical-align:middle;"><span style="line-height:35px;">GitHub</span></a></div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
-
-</div>
-
 </body>
-
 </html>
