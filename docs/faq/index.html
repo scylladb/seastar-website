@@ -1,148 +1,68 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Frequently Asked Questions - Seastar</title>
-    <link rel="stylesheet" href="http://seastar.io/css/crab.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-    <meta name="generator" content="Hugo 0.36" />
-
-
-
-    
-
-  </head>
-  <body>
-
-    <div id="container">
-
-      <div id="header">
-
-        <div id="site-logo">
-          
-            <img src="http://seastar.io//images/logo.png" width="300" height="50">
-          
-        </div>
-
-	<div id="site-title"><a href="http://seastar.io/">Seastar</a></div>
-	<div id="site-slogan">The Official Website for the Seastar Project</div>
-
-      </div>
-
-            <nav>
-	<ul class="first">
-          
-            <li><a href="/">Home</a>
-	    
-	    </li>
-	  
-            <li><a href="/">Architecture &raquo;</a>
-	    
-	      <ul class="second">
-	      
-                <li><a href="/futures-promises">Futures and Promises</a>
-		  
-		</li>
-	      
-                <li><a href="/message-passing">Message Passing</a>
-		  
-		</li>
-	      
-                <li><a href="/networking">Networking</a>
-		  
-		</li>
-	      
-                <li><a href="/shared-nothing">Shared-Nothing</a>
-		  
-		</li>
-	      
-	      </ul>
-	    
-	    </li>
-	  
-            <li><a href="/blog/">Blog</a>
-	    
-	    </li>
-	  
-            <li><a href="/seastar-applications">Seastar Applications</a>
-	    
-	    </li>
-	  
-            <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a>
-	    
-	    </li>
-	  
-            <li><a href="/faq">Frequently Asked Questions</a>
-	    
-	    </li>
-	  
-            <li><a href="https://www.scylladb.com/">ScyllaDB</a>
-	    
-	    </li>
-	  
-	</ul>
-      </nav>
-
-
-      <div id="content">
-
-        <div id="article">
-	  <h1>Frequently Asked Questions</h1>
-
-
-
-
-<h3 id="what-s-the-difference-between-the-seastar-model-and-the-reactive-programming-model">What’s the Difference Between the Seastar Model and the Reactive Programming Model?</h3>
-
-<p>Seastar futures/promises/continuations (f-p-c) are a subset of reactive programming.</p>
-
-<p>Seastar performance derives from the sharded, cooperative, non-blocking, micro-task scheduled design, and f-p-c are a friendlier way of feeding tasks to the scheduler.</p>
-
-<p>Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. They trade off thread safety, which is unneeded due to the sharded design, for scheduling efficiency, and have a very low memory footprint.</p>
-
-<h3 id="how-is-seastar-different-from-mtcp">How is Seastar Different from mTCP?</h3>
-
-<p>mTCP is a user-level TCP stack written over DPDK (or netmap). It aims to solve many of the same problems that Seastar does, including CPU-locality of connections, unnecessary locks and sharing, and system call overhead. mTCP provides a new application API, but does not provide a new framework to manage asynchrony the way that Seastar does.</p>
-
-<h3 id="what-version-of-dpdk-does-seastar-work-with">What Version of DPDK does Seastar Work With?</h3>
-
-<p>Seastar requires DPDK version 1.8.0 or later.</p>
-
-<h3 id="is-seastar-available-as-a-package-for-any-linux-distribution">Is Seastar Available as a Package for any Linux Distribution?</h3>
-
-<p>Not yet. If you are interested in packaging Seastar for your favorite distribution, please post to the list.</p>
-
-<h3 id="what-is-the-seastar-license">What is the Seastar License?</h3>
-
-<p>Seastar is open source, and released under the Apache License, Version 2.0.</p>
-
-<h3 id="where-can-i-ask-a-question-not-covered-here">Where can I ask a question not covered here?</h3>
-
-<p>Post to the <a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev mailing list</a>.</p>
-
-
+<head>
+<title>Frequently Asked Questions - Seastar</title>
+<link rel="stylesheet" href="http://seastar.io/css/crab.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+<meta name="description" content="Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.">
+<meta name="generator" content="Hugo 0.36" />
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <div id="site-title"><a href="http://seastar.io/"><img src="http://seastar.io/images/seastar-logo-white.svg" alt="Seastar Logo"></a></div>
+    <nav>
+      <ul class="first">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/">Architecture &raquo;</a>
+          <ul class="second">
+            <li><a href="/futures-promises">Futures and Promises</a> </li>
+            <li><a href="/message-passing">Message Passing</a> </li>
+            <li><a href="/networking">Networking</a> </li>
+            <li><a href="/shared-nothing">Shared-Nothing</a> </li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a> </li>
+        <li><a href="/seastar-applications">Seastar Applications</a> </li>
+        <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a> </li>
+        <li><a href="/faq">Frequently Asked Questions</a> </li>
+        <li><a href="https://www.scylladb.com/">ScyllaDB</a> </li>
+      </ul>
+    </nav>
+  </div>
 </div>
-
+<div class="container">
+  <div id="content">
+    <div id="article">
+      <h1>Frequently Asked Questions</h1>
+      <h2 id="what-s-the-difference-between-the-seastar-model-and-the-reactive-programming-model">What's the Difference Between the Seastar Model and the Reactive Programming Model?</h2>
+      <p>Seastar futures/promises/continuations (f-p-c) are a subset of reactive programming.</p>
+      <p>Seastar performance derives from the sharded, cooperative, non-blocking, micro-task scheduled design, and f-p-c are a friendlier way of feeding tasks to the scheduler.</p>
+      <p>Seastar's f-p-c do have some optimizations relative to other f-p-c designs. They trade off thread safety, which is unneeded due to the sharded design, for scheduling efficiency, and have a very low memory footprint.</p>
+      <h2 id="how-is-seastar-different-from-mtcp">How is Seastar Different from mTCP?</h2>
+      <p>mTCP is a user-level TCP stack written over DPDK (or netmap). It aims to solve many of the same problems that Seastar does, including CPU-locality of connections, unnecessary locks and sharing, and system call overhead. mTCP provides a new application API, but does not provide a new framework to manage asynchrony the way that Seastar does.</p>
+      <h2 id="what-version-of-dpdk-does-seastar-work-with">What Version of DPDK does Seastar Work With?</h2>
+      <p>Seastar requires DPDK version 1.8.0 or later.</p>
+      <h2 id="is-seastar-available-as-a-package-for-any-linux-distribution">Is Seastar Available as a Package for any Linux Distribution?</h2>
+      <p>Not yet. If you are interested in packaging Seastar for your favorite distribution, please post to the list.</p>
+      <h2 id="what-is-the-seastar-license">What is the Seastar License?</h2>
+      <p>Seastar is open source, and released under the Apache License, Version 2.0.</p>
+      <h2 id="where-can-i-ask-a-question-not-covered-here">Where can I ask a question not covered here?</h2>
+      <p>Post to the <a href="https://groups.google.com/forum/?hl=en#!forum/seastar-dev">seastar-dev mailing list</a>.</p>
+    </div>
+  </div>
 </div>
-
 <div id="footer">
-  <table style="width:50%">
-    <tr>
-      <th>Copyright 2018 ScyllaDB</th>
-      <th><a style='text-decoration:none' href='https://twitter.com/ScyllaDB'><img src='/images/twitter.png' width=20 height=20><br>Twitter</a></th>
-      <th>&nbsp&nbsp&nbsp&nbsp</th>
-      <th><a style='text-decoration:none' href='https://github.com/scylladb/seastar'><img src='/images/github.png' width=20 height=20><br>GitHub</a></th>
-    </tr>
-    <tr>
-      <td><b><p align=center><a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a></td>
- </tr>
- <tr>
-<td><b><p align=center><a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></td>
-</tr>
-  </table>
+  <div class="container">
+    <div class="section mascot-img"><img src="http://seastar.io/images/seastar-mascot-2.png"></div>
+    <div class="footer-flex">
+      <div class="section-footer">Copyright 2018 ScyllaDB | <a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a> | <a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></div>
+      <div class="section-footer">
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href='https://twitter.com/ScyllaDB'><img src="http://seastar.io/images/icon-twitter.png" style="margin:0 5px; vertical-align:middle;"><span style="line-height:35px;">Twitter</span></a></div>
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href="https://github.com/scylladb/seastar"><img src="http://seastar.io/images/icon-github.png" style="margin:0 5px;vertical-align:middle;"><span style="line-height:35px;">GitHub</span></a></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-</div>
-
 </body>
-
 </html>
