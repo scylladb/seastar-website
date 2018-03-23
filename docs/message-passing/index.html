@@ -1,114 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Message Passing - Seastar</title>
-    <link rel="stylesheet" href="http://seastar.io/css/crab.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-    <meta name="generator" content="Hugo 0.36" />
-
-
-
-    
-
-  </head>
-  <body>
-
-    <div id="container">
-
-      <div id="header">
-
-        <div id="site-logo">
-          
-            <img src="http://seastar.io//images/logo.png" width="300" height="50">
-          
-        </div>
-
-	<div id="site-title"><a href="http://seastar.io/">Seastar</a></div>
-	<div id="site-slogan">The Official Website for the Seastar Project</div>
-
-      </div>
-
-            <nav>
-	<ul class="first">
-          
-            <li><a href="/">Home</a>
-	    
-	    </li>
-	  
-            <li><a href="/">Architecture &raquo;</a>
-	    
-	      <ul class="second">
-	      
-                <li><a href="/futures-promises">Futures and Promises</a>
-		  
-		</li>
-	      
-                <li><a href="/message-passing">Message Passing</a>
-		  
-		</li>
-	      
-                <li><a href="/networking">Networking</a>
-		  
-		</li>
-	      
-                <li><a href="/shared-nothing">Shared-Nothing</a>
-		  
-		</li>
-	      
-	      </ul>
-	    
-	    </li>
-	  
-            <li><a href="/blog/">Blog</a>
-	    
-	    </li>
-	  
-            <li><a href="/seastar-applications">Seastar Applications</a>
-	    
-	    </li>
-	  
-            <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a>
-	    
-	    </li>
-	  
-            <li><a href="/faq">Frequently Asked Questions</a>
-	    
-	    </li>
-	  
-            <li><a href="https://www.scylladb.com/">ScyllaDB</a>
-	    
-	    </li>
-	  
-	</ul>
-      </nav>
-
-
-      <div id="content">
-
-        <div id="article">
-	  <h1>Message Passing</h1>
-
-
-
-
-<p>Threaded applications require inherently expensive locking operations, while the Seastar model can completely avoid locks for cross-CPU communications.</p>
-
-<p>From the programmer’s point of view, Seastar uses futures, promises, and continuations (f/p/c). Where conventional event-driven programming using epoll and userspace libraries such as libevent has made it very difficult to write complex applications, f/p/c makes it easier to write complex asynchronous code.</p>
-
-<p>For example, the following interaction between a sender core, C0, and a receiver core, C1, can take place with no locking required.
-* C0: sender -&gt; wait for queue entry (usually immediate) -&gt; enqueue request, allocate promise.
-* C1: dequeue request; execute it -&gt; move result to request object -&gt; enqueue request on response queue
-* C0: dequeue request; extract response, use it to fulfill promise; destroy request.</p>
-
-<p>Each actual queue, one for requests and a return queue for fulfilled requests, is a simple queue of pointers.</p>
-
-<p>There is one request queue and one return queue per pair of CPU cores on the system. Because a core does not pair with itself, a 16-core system will have 240 request queues and 240 return queues.</p>
-
-<h1 id="from-the-programmer-s-point-of-view">From the Programmer’s Point of View</h1>
-
-<p>Seastar provides a versatile set of programming constructs to manage communication between cores. For example:</p>
-
-<pre><code>[1]  return conn-&gt;read_exactly(4).then(temporary_buffer&lt;char&gt; buf) {
+<head>
+<title>Message Passing - Seastar</title>
+<link rel="stylesheet" href="http://seastar.io/css/crab.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+<meta name="description" content="Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.">
+<meta name="generator" content="Hugo 0.36" />
+</head>
+<body>
+<div id="header">
+  <div class="container">
+    <div id="site-title"><a href="http://seastar.io/"><img src="http://seastar.io/images/seastar-logo-white.svg" alt="Seastar Logo"></a></div>
+    <nav>
+      <ul class="first">
+        <li><a href="/">Home</a> </li>
+        <li><a href="/">Architecture &raquo;</a>
+          <ul class="second">
+            <li><a href="/futures-promises">Futures and Promises</a> </li>
+            <li><a href="/message-passing">Message Passing</a> </li>
+            <li><a href="/networking">Networking</a> </li>
+            <li><a href="/shared-nothing">Shared-Nothing</a> </li>
+          </ul>
+        </li>
+        <li><a href="/blog/">Blog</a> </li>
+        <li><a href="/seastar-applications">Seastar Applications</a> </li>
+        <li><a href="http://docs.seastar-project.org/master/index.html">Documentation</a> </li>
+        <li><a href="/faq">Frequently Asked Questions</a> </li>
+        <li><a href="https://www.scylladb.com/">ScyllaDB</a> </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div id="content">
+    <div id="article">
+      <h1>Message Passing</h1>
+      <p>Threaded applications require inherently expensive locking operations, while the Seastar model can completely avoid locks for cross-CPU communications.</p>
+      <p>From the programmer's point of view, Seastar uses futures, promises, and continuations (f/p/c). Where conventional event-driven programming using epoll and userspace libraries such as libevent has made it very difficult to write complex applications, f/p/c makes it easier to write complex asynchronous code.</p>
+      <p>For example, the following interaction between a sender core, C0, and a receiver core, C1, can take place with no locking required.
+        * C0: sender -&gt; wait for queue entry (usually immediate) -&gt; enqueue request, allocate promise.
+        * C1: dequeue request; execute it -&gt; move result to request object -&gt; enqueue request on response queue
+        * C0: dequeue request; extract response, use it to fulfill promise; destroy request.</p>
+      <p>Each actual queue, one for requests and a return queue for fulfilled requests, is a simple queue of pointers.</p>
+      <p>There is one request queue and one return queue per pair of CPU cores on the system. Because a core does not pair with itself, a 16-core system will have 240 request queues and 240 return queues.</p>
+      <h2 id="from-the-programmer-s-point-of-view">From the Programmer's Point of View</h2>
+      <p>Seastar provides a versatile set of programming constructs to manage communication between cores. For example:</p>
+      <pre><code>[1]  return conn-&gt;read_exactly(4).then(temporary_buffer&lt;char&gt; buf) {
 [2]      int id = buf_to_id(buf);
 [3]      return smp::submit_to(other_core, [id] {
 [4]           return lookup(id);
@@ -117,53 +54,31 @@
 [7]      return conn-&gt;write(result);
 [8]  });
 </code></pre>
-
-<p>Line 1 asks TCP to let us know when 4 bytes are available, and place them in a buffer. It will attempt to give us a pointer directly to the area in the packet containing the data, but will allocate a buffer if this is not possible (say, because the 4 bytes arrived in different packets).</p>
-
-<p>Line 2 executes when our four bytes have arrived, and decodes the request (here, into an item ID).</p>
-
-<p>Line 3 asks other_core to do something on our behalf, and to let us know when it is done.</p>
-
-<p>Line 4 is executed on the other core, when it catches up. It calls a lookup function to query the local data store, and returns a result.</p>
-
-<p>Line 5 lets the response from other_core to get back to us.</p>
-
-<p>Line 6 (which is executed immediately after line 3) tells line 3 what to do when we get a response.</p>
-
-<p>Line 7 receives the response from other_core and writes it back into the connection, as a result.</p>
-
-<p>Behind the scenes, quite a lot is happening. A <code>.then()</code> function may decide to execute its block immediately (for read_exactly(), if the data happens to be available; for <code>write()</code>, if the TCP send buffer is not full). It may decide to defer execution (if data is not available) in which case it allocates a small chunk of memory, and stores the block’s captures in it (these appear inside the square brackets, such as <code>[id]</code> on line 3) and attach it to whatever it is we’re waiting for—the promise.</p>
-
-<p><code>submit_to()</code> does something similar, but more specialized: it moves the block into a newly allocated memory area, waits until the smp queue is not too busy, queues up the request on a core-to-core queue, and returns. Eventually the scheduler will poll the response queue, pick up the same object on its way back, and move the result into the promise, firing off the continuation.</p>
-
-<h1 id="simplified-testing-and-troubleshooting">Simplified testing and troubleshooting</h1>
-
-<p>Parallel programming is a rare developer skill that is coming into higher and higher demand with increases in CPU counts and workload parallelization. While efficient use of CPU time is necessary, efficient use of programmer time is even more important for most projects. Seastar is the only framework that implements both world-class performance and a comprehensible, testable developer experience.</p>
-
-
+      <p>Line 1 asks TCP to let us know when 4 bytes are available, and place them in a buffer. It will attempt to give us a pointer directly to the area in the packet containing the data, but will allocate a buffer if this is not possible (say, because the 4 bytes arrived in different packets).</p>
+      <p>Line 2 executes when our four bytes have arrived, and decodes the request (here, into an item ID).</p>
+      <p>Line 3 asks other_core to do something on our behalf, and to let us know when it is done.</p>
+      <p>Line 4 is executed on the other core, when it catches up. It calls a lookup function to query the local data store, and returns a result.</p>
+      <p>Line 5 lets the response from other_core to get back to us.</p>
+      <p>Line 6 (which is executed immediately after line 3) tells line 3 what to do when we get a response.</p>
+      <p>Line 7 receives the response from other_core and writes it back into the connection, as a result.</p>
+      <p>Behind the scenes, quite a lot is happening. A <code>.then()</code> function may decide to execute its block immediately (for read_exactly(), if the data happens to be available; for <code>write()</code>, if the TCP send buffer is not full). It may decide to defer execution (if data is not available) in which case it allocates a small chunk of memory, and stores the block's captures in it (these appear inside the square brackets, such as <code>[id]</code> on line 3) and attach it to whatever it is we're waiting for—the promise.</p>
+      <p><code>submit_to()</code> does something similar, but more specialized: it moves the block into a newly allocated memory area, waits until the smp queue is not too busy, queues up the request on a core-to-core queue, and returns. Eventually the scheduler will poll the response queue, pick up the same object on its way back, and move the result into the promise, firing off the continuation.</p>
+      <h2 id="simplified-testing-and-troubleshooting">Simplified testing and troubleshooting</h2>
+      <p>Parallel programming is a rare developer skill that is coming into higher and higher demand with increases in CPU counts and workload parallelization. While efficient use of CPU time is necessary, efficient use of programmer time is even more important for most projects. Seastar is the only framework that implements both world-class performance and a comprehensible, testable developer experience.</p>
+    </div>
+  </div>
 </div>
-
-</div>
-
 <div id="footer">
-  <table style="width:50%">
-    <tr>
-      <th>Copyright 2018 ScyllaDB</th>
-      <th><a style='text-decoration:none' href='https://twitter.com/ScyllaDB'><img src='/images/twitter.png' width=20 height=20><br>Twitter</a></th>
-      <th>&nbsp&nbsp&nbsp&nbsp</th>
-      <th><a style='text-decoration:none' href='https://github.com/scylladb/seastar'><img src='/images/github.png' width=20 height=20><br>GitHub</a></th>
-    </tr>
-    <tr>
-      <td><b><p align=center><a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a></td>
- </tr>
- <tr>
-<td><b><p align=center><a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></td>
-</tr>
-  </table>
+  <div class="container">
+    <div class="section mascot-img"><img src="http://seastar.io/images/seastar-mascot-2.png"></div>
+    <div class="footer-flex">
+      <div class="section-footer">Copyright 2018 ScyllaDB | <a style='text-decoration:none' href='http://www.cloudius-systems.com/privacy/'>Privacy Policy</a> | <a style='text-decoration:none' href='mailto:info@scylladb.com'>info@scylladb.com</a></div>
+      <div class="section-footer">
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href='https://twitter.com/ScyllaDB'><img src="http://seastar.io/images/icon-twitter.png" style="margin:0 5px; vertical-align:middle;"><span style="line-height:35px;">Twitter</span></a></div>
+        <div style="float:right; margin:0 30px;"> <a style="text-decoration:none;" href="https://github.com/scylladb/seastar"><img src="http://seastar.io/images/icon-github.png" style="margin:0 5px;vertical-align:middle;"><span style="line-height:35px;">GitHub</span></a></div>
+      </div>
+    </div>
+  </div>
 </div>
-
-</div>
-
 </body>
-
 </html>
