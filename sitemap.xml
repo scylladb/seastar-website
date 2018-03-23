@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://seastar.io/blog/2018/02/the-seastar-framework-was-accepted-for-google-summer-of-code/</loc>
+    <lastmod>2018-02-21T08:02:27-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/blog/2018/02/seastar-the-future-is-here/</loc>
+    <lastmod>2018-02-13T08:02:27-08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/faq/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/futures-promises/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/http-performance/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/home/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/message-passing/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/networking/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/seastar-applications/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/shared-nothing/</loc>
+    <lastmod>2017-02-05T07:51:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/blog/</loc>
+    <lastmod>2018-02-21T08:02:27-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/</loc>
+    <lastmod>2018-02-21T08:02:27-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://seastar.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
