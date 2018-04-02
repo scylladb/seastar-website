@@ -1,5 +1,69 @@
 {{ partial "header.html" . }}
-  {{ range where .Data.Pages "Title" "Home" }}
-    {{ .Content }}
-  {{ end }}
+{{ range where .Data.Pages "Title" "Home" }}
+<div id="header-container">
+    <div id="header-intro">Seastar is an advanced, open-source C++ framework for high-performance server applications on
+        modern hardware. Seastar is used in <a href="http://www.scylladb.com/">Scylla</a>, a high-performance NoSQL
+        database compatible with Apache Cassandra. Applications using Seastar can run on <a href="http://kernel.org/">Linux</a>
+        or <a href="http://osv.io/">OSv</a>.
+    </div>
+    <a class="hero-cta" href="#getting-started">Get Started</a>
+</div>
+<div class="container">
+    <hr class="dotted-line">
+    <div id="content">
+        <div class="features-panel">
+            <h1>Seastar is the first framework to bring together a set of extreme architectural innovations,
+                including:</h1>
+            <ul class="features-left-col">
+                <li><a href="/shared-nothing">Shared-nothing design</a>: Seastar uses a shared-nothing model that shards
+                    all requests onto individual cores.
+                </li>
+                <li><a href="/networking">High-performance networking</a>: Seastar offers a choice of network stack,
+                    including conventional Linux networking for ease of development, DPDK for fast user-space networking
+                    on Linux, and native networking on OSv.
+                </li>
+            </ul>
+            <ul class="features-right-col">
+                <li><a href="/futures-promises">Futures and promises</a>: An advanced new model for concurrent
+                    applications that offers C++ programmers both high performance and the ability to create
+                    comprehensible, testable high-quality code.
+                </li>
+                <li><a href="/message-passing">Message passing</a>: A design for sharing information between CPU cores
+                    without time-consuming locking
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="content-panel">
+    <div class="container">
+        <div class="floating-lines">
+            <hr class="dotted-line" style="margin-top:70px;">
+        </div>
+        <div class="floating-mascot"><img src="images/seastar-mascot-1.png" class="img-sizing"></div>
+        <div class="floating-lines">
+            <hr class="dotted-line" style="margin-top:70px;">
+        </div>
+        <h2 id="getting-started-with-seastar" style="clear:both;"><a id="getting-started"></a>Getting Started with
+            Seastar</h2>
+        <p>Source code is available from the <a href="https://github.com/scylladb">Seastar repository on GitHub</a>.</p>
+        <p><a href="http://docs.seastar-project.org/">Seastar documentation</a> is available on the web or within the
+            source code.</p>
+        <p><a href="https://groups.google.com/forum/?hl=en#!forum-dev">seastar-dev</a> is the project mailing list.</p>
+        <p>Follow <a href="https://twitter.com/ScyllaDB">@ScyllaDB</a> on Twitter for more info.</p>
+    </div>
+</div>
+<div class="container">
+    <div id="content">
+        <hr class="dotted-line">
+        <h2 id="performance">Performances</h2>
+        <p style="text-align:center;"><img src="images/seastar-httpd-throughput-home.png" alt="image" class="diagram-img"/>
+            <img src="images/seastar-memcache.png" alt="image" class="diagram-img"/></p>
+        <div style="text-align:center;">
+            <p>In the above examples, all servers are running on Linux. The stock Memcached is version 1.4.17.</p>
+            <p><a href="/http-performance/">Details on HTTP performance</a> data are also available.</p>
+        </div>
+    </div>
+</div>
+{{ end }}
 {{ partial "footer.html" . }}

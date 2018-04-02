@@ -11,7 +11,7 @@ On June 8, 2016, Avi Kivity came to NYC to present ScyllaDB. During his search f
 
 I’ve now been using Seastar for almost two years and I haven’t changed my mind.
 
-### The future<> is all about concurrency
+## The future<> is all about concurrency
 
 For the truly impatient, the future<> is here[^2].
 
@@ -38,13 +38,13 @@ At its core, from the project site, Seastar promises:
 
 … but it is much more, so let’s get technical and find out how Seastar executes these concurrency building blocks.
 
-### Enter Seastar… at your own risk, you might not come back
+## Enter Seastar… at your own risk, you might not come back
 
 In a past life, I helped build Concord.io with facebook’s folly::futures[^15], and wangle[^16] for networking and async execution. While these libraries enabled us to deliver high-performance code using similar primitives, their use of asynchronous operations is not as pervasive as that of Seastar. They are libraries and not frameworks, which is the first distinction. That is, you can use the parts of the libraries that you need without needing to include or use the rest. You can tick your own clocks, your own IOEventLoops, your own CPU Scheduling, your own ```syscall()``` thread pool, etc. Seastar, on the contrary, tells you that you have to operate within their framework. It is not possible to take parts of Seastar and use them on your code base without the IO subsystem or the CPU subsystem.
 
 While this decision seems like a disadvantage, it is actually an enforcer of asynchronicity – very much like actors. It is front and center to everything you do. This is a good thing.
 
-### No locks, atomics, cache polluting primitives
+## No locks, atomics, cache polluting primitives
 
 Seastar takes one extreme approach to data locality. It uses almost no locks, atomics, or in any way implicit memory sharing with other cores. Your view into any application starts with a ```seastar::distributed<T>``` type. This means a copy of the T is thread local.
 
@@ -59,7 +59,7 @@ They, of course, cover all the basics for high-performance applications:
 * Linux DAIO
 * and many many more!
 
-### A Mental Model
+## A Mental Model
 ![image](/images/alex-seastar-2.png)
 
  *Figure 1: Seastar Mental Model. Everything in Seastar happens in a `thread_local’ (per hyper-thread) with the exception of explicit cross-core communication. As with all mental models, this is a simplification and omits details.*
@@ -92,7 +92,7 @@ These massive gains should be expected of many server-side applications.
 
 Want to learn more about Seastar and smf? Please check out my [talk](https://www.scylladb.com/tech-talk/smf-fastest-rpc-west-scylla-summit-2017/) from Scylla Summit 2017 or visit the main Seastar and [smf page](https://github.com/senior7515/smf).
 
-### References 
+## References 
 
 [^1]: [concord](http://concord.io/) – my previous startup.
 [^2]: [future header file](https://github.com/scylladb/blob/master/core/future.hh).

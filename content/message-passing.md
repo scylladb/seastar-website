@@ -16,7 +16,7 @@ Each actual queue, one for requests and a return queue for fulfilled requests, i
 
 There is one request queue and one return queue per pair of CPU cores on the system. Because a core does not pair with itself, a 16-core system will have 240 request queues and 240 return queues.
 
-# From the Programmer’s Point of View
+## From the Programmer’s Point of View
 
 Seastar provides a versatile set of programming constructs to manage communication between cores. For example:
 ```
@@ -47,5 +47,5 @@ Behind the scenes, quite a lot is happening. A ```.then()``` function may decide
 
 ```submit_to()``` does something similar, but more specialized: it moves the block into a newly allocated memory area, waits until the smp queue is not too busy, queues up the request on a core-to-core queue, and returns. Eventually the scheduler will poll the response queue, pick up the same object on its way back, and move the result into the promise, firing off the continuation.
 
-# Simplified testing and troubleshooting
+## Simplified testing and troubleshooting
 Parallel programming is a rare developer skill that is coming into higher and higher demand with increases in CPU counts and workload parallelization. While efficient use of CPU time is necessary, efficient use of programmer time is even more important for most projects. Seastar is the only framework that implements both world-class performance and a comprehensible, testable developer experience.

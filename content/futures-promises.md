@@ -3,10 +3,10 @@ date = "2017-02-05T07:51:49+01:00"
 title = "Futures and Promises"
 draft = false
 +++
-# Paradigms for parallellization
+## Paradigms for parallellization
 Solutions for coordinating work across multiple cores are many. Some are highly programmer-friendly and enable development of software that works exactly if it were running on a single core. For example the classic Unix process model is designed to keep each process in total isolation and relies on kernel code to maintain a separate virtual memory space per process. Unfortunately this increases the overhead at the OS level.
 
-# Software development challenges
+## Software development challenges
 
 
 ```"Programs must be written for people to read, and only incidentally for machines to execute."```
@@ -28,7 +28,7 @@ An ideal solution would have:
 
 * Low debugging costs
 
-# Solution: Seastar futures and promises
+## Solution: Seastar futures and promises
 The solution is a model known as “futures and promises”.
 
 A future is a data structure that represents some yet-undetermined result. A promise is the provider of this result.
@@ -43,7 +43,7 @@ However, the optimized Seastar implementations of futures and promises are diffe
 * Seastar futures and promises do not allocate memory.
 * Seastar futures support continuations.
 
-# Example
+## Example
 A simple example of a future/promise pair is:
 ```
 #include "seastar/core/reactor.hh"
