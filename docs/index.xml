@@ -71,9 +71,7 @@ This benchmark uses two identical Intel® Server System R2000WT servers.
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
       
       <guid>http://seastar.io/home/</guid>
-      <description>Seastar is an advanced, open-source C++ framework for high-performance server applications on modern hardware. Seastar is used in Scylla, a high-performance NoSQL database compatible with Apache Cassandra. Applications using Seastar can run on Linux or OSv.
-Seastar is the first framework to bring together a set of extreme architectural innovations, including:
- Shared-nothing design: Seastar uses a shared-nothing model that shards all requests onto individual cores. High-performance networking: Seastar offers a choice of network stack, including conventional Linux networking for ease of development, DPDK for fast user-space networking on Linux, and native networking on OSv.</description>
+      <description></description>
     </item>
     
     <item>
