@@ -3,6 +3,34 @@
   <head>
     <title>{{ .Title }} - {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ .Site.BaseURL }}css/crab.css">
+    
+    <!-- Old School Method  -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- Browsers & Devices -->
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-16x16.png" sizes="16x16">  
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-64x64.png" sizes="64x64">  
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-128x128.png" sizes="128x128"> <!--Chrome webstore-->
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-196x196.png" sizes="196x196"> <!--Android Chrome icon-->
+<link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/favicon-228x228.png" sizes="228x228"> <!--Opera Coast icon-->
+
+<!-- iOS & other mobile devices -->
+<link rel="apple-touch-icon" href="{{ .Site.BaseURL }}images/favicon-120x120-older-iphone.png">  
+<link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}images/favicon-180x180-iPhone-6-Plus.png">  
+<link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.BaseURL }}images/favicon-152x152-iPad-Retina.png">  
+<link rel="apple-touch-icon" sizes="167x167" href="{{ .Site.BaseURL }}images/favicon-167x167-iPad-Pro.png">
+
+<!-- Windows Tiles (if not using a browserconfig.xml in root directory) -->
+<meta name="msapplication-TileColor" content="#582686" />
+<meta name="application-name" content="Seastar" />
+<meta name="msapplication-square70x70logo" content="{{ .Site.BaseURL }}images/favicon-70x70-mstile.png" />
+<meta name="msapplication-square150x150logo" content="{{ .Site.BaseURL }}images/favicon-150x150-mstile.png" />
+<meta name="msapplication-wide310x150logo" content="{{ .Site.BaseURL }}images/favicon-310x150-mstile.png" />
+<meta name="msapplication-square310x310logo" content="{{ .Site.BaseURL }}images/favicon-310x310-mstile.png" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
     {{ .Hugo.Generator }}
     {{ if isset .Site.Params "mathjax"}}
