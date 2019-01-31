@@ -9,4 +9,4 @@ While many applications can benefit from high performance, Seastar is currently 
 * [Pedis](https://github.com/fastio/pedis): Redis-compatible data structure store
 * [Scylla](http://www.scylladb.com/): NoSQL column-store database, compatible with Apache Cassandra at 10x the throughput
 * Seastar HTTPD: web server
-* [Seastar Memcached](http://www.seastar-project.org/memcached/): a fast server for the Memcache key-value store
+* [Seastar Memcached](https://github.com/scylladb/seastar/wiki/Running-Seastar-Memcached): a fast server for the Memcache key-value store
