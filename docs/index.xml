@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Seastar</title>
@@ -6,11 +6,7 @@
     <description>Recent content on Seastar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Feb 2018 08:02:27 -0800</lastBuildDate>
-    
-	<atom:link href="http://seastar.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 21 Feb 2018 08:02:27 -0800</lastBuildDate><atom:link href="http://seastar.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Seastar Framework Was Accepted for Google Summer of Code</title>
       <link>http://seastar.io/blog/2018/02/the-seastar-framework-was-accepted-for-google-summer-of-code/</link>
@@ -53,6 +49,15 @@ Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. Th
     </item>
     
     <item>
+      <title>Home</title>
+      <link>http://seastar.io/home/</link>
+      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
+      
+      <guid>http://seastar.io/home/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>HTTP performance</title>
       <link>http://seastar.io/http-performance/</link>
       <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
@@ -60,18 +65,9 @@ Seastar’s f-p-c do have some optimizations relative to other f-p-c designs. Th
       <guid>http://seastar.io/http-performance/</guid>
       <description>Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.
 This benchmark uses two identical Intel® Server System R2000WT servers.
- 2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core (28 cores per host, with hyperthreading to 56 cores per host)
- 8x 8GB DDR4 Micron memory
- 12x 300GB Intel S3500 SSD (in RAID5, 3TB of storage for OS)</description>
-    </item>
-    
-    <item>
-      <title>Home</title>
-      <link>http://seastar.io/home/</link>
-      <pubDate>Sun, 05 Feb 2017 07:51:49 +0100</pubDate>
-      
-      <guid>http://seastar.io/home/</guid>
-      <description></description>
+  2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core (28 cores per host, with hyperthreading to 56 cores per host)
+  8x 8GB DDR4 Micron memory
+  12x 300GB Intel S3500 SSD (in RAID5, 3TB of storage for OS)</description>
     </item>
     
     <item>
@@ -92,7 +88,7 @@ For example, the following interaction between a sender core, C0, and a receiver
       
       <guid>http://seastar.io/networking/</guid>
       <description>Seastar supports four different networking modes on two platforms, all without application code changes. The same application can be built as a dedicated server appliance or unikernel-based VM.
- DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking.</description>
+ DPDK networking on Linux: A Seastar application running on Linux host can access a physical network device directly. Seastar applications can use DPDK when running as a guest, via device assignment, or on bare metal. This mode provides low-latency, high-throughput networking. No system calls are required for communicating, and no data copying ever occurs.</description>
     </item>
     
     <item>

@@ -32,7 +32,7 @@
 <meta name="msapplication-square310x310logo" content="http://seastar.io/images/favicon-310x310-mstile.png" />
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
-    <meta name="generator" content="Hugo 0.36" />
+    <meta name="generator" content="Hugo 0.80.0" />
     
   </head>
   <body>
@@ -102,30 +102,35 @@
             <h1>HTTP performance</h1>
             
             <p>Tests of a new Seastar-based HTTP server show that it is capable of ~7M requests/second on a single node. Details of the benchmark follow.</p>
-
-<p><img src="/images/seastar-httpd-throughput.png" alt="image" /></p>
-
+<p><img src="/images/seastar-httpd-throughput.png" alt="image"></p>
 <p>This benchmark uses two identical <a href="http://www.intel.com/p/en_US/support/category/server/r2000wt/doc_guide">Intel® Server System R2000WT</a> servers.</p>
-
 <ul>
-<li><p>2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core
-(28 cores per host, with hyperthreading to 56 cores per host)</p></li>
-
-<li><p>8x 8GB DDR4 Micron memory</p></li>
-
-<li><p>12x 300GB Intel S3500 SSD (in RAID5, 3TB of storage for OS)</p></li>
-
-<li><p>2x 400GB Intel NVMe P3700 SSD (not mounted for this benchmark)</p></li>
-
-<li><p>2x Intel Ethernet CNA XL710-QDA1 (two cards per server, cards are separated by CPUs. card1: CPU1, card2: CPU2)</p></li>
-
-<li><p>OS info: Fedora Server 21, update with the latest updates as of February 19, 2015.</p></li>
-
-<li><p>Kernel: Linux dpdk1 3.17.8-300.fc21.x86_64</p></li>
-
-<li><p>Default BIOS settings (TurboBoost enabled, HyperThreading enabled)</p></li>
+<li>
+<p>2x Xeon E5-2695v3: 2.3GHz base, 35M cache, 14 core
+(28 cores per host, with hyperthreading to 56 cores per host)</p>
+</li>
+<li>
+<p>8x 8GB DDR4 Micron memory</p>
+</li>
+<li>
+<p>12x 300GB Intel S3500 SSD (in RAID5, 3TB of storage for OS)</p>
+</li>
+<li>
+<p>2x 400GB Intel NVMe P3700 SSD (not mounted for this benchmark)</p>
+</li>
+<li>
+<p>2x Intel Ethernet CNA XL710-QDA1 (two cards per server, cards are separated by CPUs. card1: CPU1, card2: CPU2)</p>
+</li>
+<li>
+<p>OS info: Fedora Server 21, update with the latest updates as of February 19, 2015.</p>
+</li>
+<li>
+<p>Kernel: Linux dpdk1 3.17.8-300.fc21.x86_64</p>
+</li>
+<li>
+<p>Default BIOS settings (TurboBoost enabled, HyperThreading enabled)</p>
+</li>
 </ul>
-
 <p>Full list of commands for reproducing this benchmark available on the <a href="https://github.com/scylladb/seastar/wiki/HTTPD-benchmark">Seastar wiki: HTTPD Benchmark</a> page.</p>
 
             
